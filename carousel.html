@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Hummingbird: Carousel Plugin</title>
+	<meta name="description" content="">
+	<meta name="author" content="">	
+	<!--Microsoft. Delete if not required -->
+	<meta http-equiv="cleartype" content="on">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Icons -->
+	<link title="iPhone4" rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ios-114.png">
+	<link title="iPad" rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ios-72.png">
+	<link title="iPhone3" rel="apple-touch-icon-precomposed" href="img/ios.png">
+	<link title="nokia" rel="shortcut icon" href="img/ios.png">
+	<link title="Favicon" rel="shortcut icon" href="/favicon.ico">
+	<!--iOS. Delete if not required -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="apple-touch-startup-image" href="img/splash.png">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->	
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css?v=1">
+	<link rel="stylesheet" href="css/skin.css?v=1">
+	<!-- jQuery and HTML5 script so IE knows how to style the html5 elements -->
+	<script src="js/libs/jquery.js"></script>	
+	<script src="js/libs/html5.js"></script>	
+	
+<!-- ============== Plugin Specific Code  ======================================================================================== -->
+	<link rel="stylesheet" href="css/plugins/carousel.css?v=1">
+	<script src="js/plugins/carousel1.8.js"></script>	
+	<script>
+		$(document).ready(function()
+		{
+			// carousel demo 1		
+			$("#carousel1").carousel({
+					vertical: false,
+					scrollNext: "#carousel1 .next",
+					scrollPrev: "#carousel1 .prev",
+					scrollPane: "#carousel1 .carouselPane",
+					scrollNum: 2,
+					circular: false,
+					scrollVisible: 4,
+					itemHeight: 90,
+					itemWidth: 130,
+					scrollSpeed : 500
+			});
+			
+			// carousel demo 2
+			$("#carousel2").carousel({
+					vertical: true,
+					scrollNext: "#carousel2 .next",
+					scrollPrev: "#carousel2 .prev",
+					scrollPane: "#carousel2 .carouselPane",
+					scrollNum: 4,
+					circular: false,
+					scrollVisible: 4,
+					itemHeight: 90,
+					itemWidth: 130,
+					scrollSpeed : 1000
+			});
+			
+			// carousel demo 3
+			$("#carousel3").carousel({
+					vertical: false,
+					scrollNext: "#carousel3 .next",
+					scrollPrev: "#carousel3 .prev",
+					scrollPane: "#carousel3 .carouselPane",
+					scrollNum: 4,
+					circular: true,
+					scrollVisible: 4,
+					itemHeight: 90,
+					itemWidth: 130,
+					scrollSpeed : 2000,
+					controlPane: true,
+					controlList: "#carousel3 .controlList"
+			});
+			
+			// carousel demo 4
+			$("#carousel4").carousel({
+					vertical: false,
+					scrollNext: "#carousel4 .next",
+					scrollPrev: "#carousel4 .prev",
+					scrollPane: "#carousel4 .carouselPane",
+					scrollNum: 3,
+					circular: true,
+					scrollVisible: 4,
+					itemHeight: 90,
+					itemWidth: 130,
+					scrollSpeed : 1000,
+					controlPane: true,
+					controlList: "#carousel4 .controlList",
+					rotating: true,
+					rotatingSpeed: 1500,
+					rotatingDirection: "backward",
+					rotatingPause : 2000,
+			});
+			
+			// carousel demo 5
+			$("#carousel5").carousel({
+					vertical: false,
+					scrollNext: "#carousel5 .next",
+					scrollPrev: "#carousel5 .prev",
+					scrollPane: "#carousel5 .carouselPane",
+					scrollNum: 1,
+					circular: false,
+					scrollVisible: 1,
+					itemHeight: 100,
+					itemWidth: 920,
+					scrollSpeed : 0,
+					controlPane: true,
+					controlList: "#carousel5 .controlList"
+			});
+			
+			// carousel demo 6
+			$("#carousel6").carousel({
+					vertical: true,
+					scrollNext: "#carousel6 .next",
+					scrollPrev: "#carousel6 .prev",
+					scrollPane: "#carousel6 .carouselPane",
+					scrollNum: 1,
+					circular: true,
+					scrollVisible: 5,
+					itemHeight: 90,
+					itemWidth: 130,
+					scrollSpeed : 400,
+					rotating: true,
+					rotatingSpeed: 400,
+					rotatingDirection: "forward",
+					rotatingPause : 2000,
+			});
+			
+		});
+	</script>
+</head>
+<div id="wrap" class="clear">
+	<!-- begin #header -->
+	<header id="header" class="clear">
+		<!-- navigation -->
+		<nav role="navigation">
+			<a href="index.html" id="logo"><img src="img/logo-small.png" alt="Pollenizer: Building & Investing In Great Web Businesses" role="banner"></a>
+			<ul role="menu" class="f-right">
+				<li role="menuitem"><a href="index.html">Home</a></li>
+				<li role="menuitem"><a href="markup.html">Markup</a></li>
+				<li role="menuitem"><a href="style.html">Style</a></li>
+				<li role="menuitem"><a href="javascript.html">Javascript</a></li>
+				<li role="menuitem"><a href="styleguide.html">Styleguide</a></li>
+			</ul>
+		</nav>
+	</header><!-- end #header -->    
+    <!-- begin #page-->
+    <div id="page" class="clear">
+   		<div class="pageWrap">
+	 		<div id="content" role="main">
+	 	   		<div class="contentWrap">
+	 	   				
+ 	   				<section class="module rounded"> 
+ 	   					<header class="subhead">
+ 	   						<h2>Plugin Desc</h2>
+ 	   					</header>
+ 	   					<p>The carousel is a list of items, with the ability to scroll inside of a viewing window. This carousel has two parts to the controls. A previous and next button to control regular scrolling. Also, there is an option to use a "control list" which gives the ability to scroll to any position in the carousel without having to manually scroll to that position.</p>
+ 	   					<p>A full description of the javascript implementation and the settings that are avaliable is in the javascript file.</p>
+ 	   				
+ 	   				
+ 	   					<header class="subhead">
+ 	   						<h2>Carousel Demo 1 <em>default settings</em></h2>
+ 	   					</header>
+ 	   					<div class="carousel" id="carousel1">
+ 	   						<div class="carouselPane">
+ 	   							<ul>
+	 	   							<li><img src="img/plugins/weather/clouds1.jpg" width="120" height="80" alt="" /></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds2.jpg" width="120" height="80" alt="" /></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds3.jpg" width="120" height="80" alt="" /></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds4.jpg" width="120" height="80" alt="" /></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds5.jpg" width="120" height="80" alt="" /></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds6.jpg" width="120" height="80" alt="" /></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds7.jpg" width="120" height="80" alt="" /></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds8.jpg" width="120" height="80" alt="" /></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds9.jpg" width="120" height="80" alt="" /></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds10.jpg" width="120" height="80" alt="" /></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds11.jpg" width="120" height="80" alt="" /></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds12.jpg" width="120" height="80" alt="" /></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds13.jpg" width="120" height="80" alt="" /></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds14.jpg" width="120" height="80" alt="" /></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds15.jpg" width="120" height="80" alt="" /></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds16.jpg" width="120" height="80" alt="" /></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds17.jpg" width="120" height="80" alt="" /></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds18.jpg" width="120" height="80" alt="" /></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds19.jpg" width="120" height="80" alt="" /></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds20.jpg" width="120" height="80" alt="" /></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds21.jpg" width="120" height="80" alt="" /></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds22.jpg" width="120" height="80" alt="" /></li>
+  	  				 	 	 	</ul>
+ 	   						</div>
+ 	   						<a href="" class="btn prev rounded">prev</a>
+ 	   						<a href="" class="btn next rounded">next</a>	 	   						
+ 	   					</div>	 	   					
+ 	   				
+ 	   					<header class="subhead">
+ 	   						<h2>Carousel Demo 3 <em>circular carousel with control panel</em></h2>
+ 	   					</header>
+ 	   					<div class="carousel" id="carousel3">
+ 	   						<div class="carouselPane">
+ 	   							<ul>
+	 	   							<li><img src="img/plugins/weather/clouds1.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds2.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds3.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds4.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds5.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds6.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds7.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds8.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds9.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds10.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds11.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds12.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds13.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds14.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds15.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds16.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds17.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds18.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds19.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds20.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds21.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds22.jpg" width="120" height="80" alt=""/></li>
+  	  				 	 	 	</ul>
+ 	   						</div>
+ 	   						<a href="" class="btn prev rounded">prev</a>
+ 	   						<a href="" class="btn next rounded">next</a>
+ 	   						<div class="controlPane">
+								 <ul class="controlList">
+			   	   			         <li><span>1</span></li>
+			   	   			         <li><span>2</span></li>
+			   	   			         <li><span>3</span></li>
+			   	   			         <li><span>4</span></li>
+			   	   			         <li><span>5</span></li>
+			   	   			         <li><span>6</span></li>
+			   	   			         <li><span>7</span></li>
+			   	   			         <li><span>8</span></li>
+			   	   			         <li><span>9</span></li>
+									 <li><span>10</span></li>
+									 <li><span>11</span></li>
+			   	   			         <li><span>12</span></li>
+			   	   			         <li><span>13</span></li>
+			   	   			         <li><span>14</span></li>
+			   	   			         <li><span>15</span></li>
+			   	   			         <li><span>16</span></li>
+			   	   			         <li><span>17</span></li>
+			   	   			         <li><span>18</span></li>
+			   	   			         <li><span>19</span></li>
+									 <li><span>20</span></li>
+									 <li><span>21</span></li>
+			   	   			         <li><span>22</span></li>
+								 </ul>
+	   	   					 </div>		 	   						
+ 	   					</div>	 	   					
+ 	   				
+ 	   					<header class="subhead">
+ 	   						<h2>Carousel Demo 4 <em>circular, with control panel and auto-rotating in reverse</em></h2>
+ 	   					</header>
+ 	   					<div class="carousel" id="carousel4">
+ 	   						<div class="carouselPane">
+ 	   							<ul>
+	 	   							<li><img src="img/plugins/weather/clouds1.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds2.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds3.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds4.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds5.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds6.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds7.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds8.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds9.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds10.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds11.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds12.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds13.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds14.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds15.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds16.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds17.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds18.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds19.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds20.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds21.jpg" width="120" height="80" alt=""/></li>
+      	  				 	 	 	<li><img src="img/plugins/weather/clouds22.jpg" width="120" height="80" alt=""/></li>
+  	  				 	 	 	</ul>
+ 	   						</div>
+ 	   						<a href="" class="btn prev rounded">prev</a>
+ 	   						<a href="" class="btn next rounded">next</a>
+ 	   						<div class="controlPane">
+								 <ul class="controlList">
+			   	   			         <li><span>1</span></li>
+			   	   			         <li><span>2</span></li>
+			   	   			         <li><span>3</span></li>
+			   	   			         <li><span>4</span></li>
+			   	   			         <li><span>5</span></li>
+			   	   			         <li><span>6</span></li>
+			   	   			         <li><span>7</span></li>
+			   	   			         <li><span>8</span></li>
+			   	   			         <li><span>9</span></li>
+									 <li><span>10</span></li>
+									 <li><span>11</span></li>
+			   	   			         <li><span>12</span></li>
+			   	   			         <li><span>13</span></li>
+			   	   			         <li><span>14</span></li>
+			   	   			         <li><span>15</span></li>
+			   	   			         <li><span>16</span></li>
+			   	   			         <li><span>17</span></li>
+			   	   			         <li><span>18</span></li>
+			   	   			         <li><span>19</span></li>
+									 <li><span>20</span></li>
+									 <li><span>21</span></li>
+			   	   			         <li><span>22</span></li>
+								 </ul>
+	   	   					 </div>	 	   						
+ 	   					</div>	 	   					
+ 	   				
+ 	   					<header class="subhead">
+ 	   						<h2>Carousel Demo 5 <em>no next/prev buttons, with control panel, scroll visible = 1, animation speed 0</em></h2>
+ 	   					</header>
+ 	   					<div class="carousel" id="carousel5">
+ 	   						<div class="carouselPane">
+ 	   							<ul>
+	 	   							<li>
+	 	   								<div class="infoBox">
+	 	   									<h4>Slide 1 Title</h4>
+	 	   									<p>Morbi et orci libero. Ut gravida commodo felis, quis sodales diam scelerisque at. Ut eget libero ligula, sed gravida ante. Suspendisse quis purus quis tortor posuere elementum!</p>
+	 	   								</div>
+	 	   							</li>
+	 	   							<li>
+	 	   								<div class="infoBox">
+	 	   									<h4>Slide 2 Title</h4>
+	 	   									<p>Morbi et orci libero. Ut gravida commodo felis, quis sodales diam scelerisque at. Ut eget libero ligula, sed gravida ante. Suspendisse quis purus quis tortor posuere elementum!</p>
+	 	   								</div>
+	 	   							</li>
+	 	   							<li>
+	 	   								<div class="infoBox">
+	 	   									<h4>Slide 3 Title</h4>
+	 	   									<p>Morbi et orci libero. Ut gravida commodo felis, quis sodales diam scelerisque at. Ut eget libero ligula, sed gravida ante. Suspendisse quis purus quis tortor posuere elementum!</p>
+	 	   								</div>
+	 	   							</li>
+	 	   							<li>
+	 	   								<div class="infoBox">
+	 	   									<h4>Slide 4 Title</h4>
+	 	   									<p>Morbi et orci libero. Ut gravida commodo felis, quis sodales diam scelerisque at. Ut eget libero ligula, sed gravida ante. Suspendisse quis purus quis tortor posuere elementum!</p>
+	 	   								</div>
+	 	   							</li>
+	 	   							<li>
+	 	   								<div class="infoBox">
+	 	   									<h4>Slide 5 Title</h4>
+	 	   									<p>Morbi et orci libero. Ut gravida commodo felis, quis sodales diam scelerisque at. Ut eget libero ligula, sed gravida ante. Suspendisse quis purus quis tortor posuere elementum!</p>
+	 	   								</div>
+	 	   							</li>
+	 	   							<li>
+	 	   								<div class="infoBox">
+	 	   									<h4>Slide 6 Title</h4>
+	 	   									<p>Morbi et orci libero. Ut gravida commodo felis, quis sodales diam scelerisque at. Ut eget libero ligula, sed gravida ante. Suspendisse quis purus quis tortor posuere elementum!</p>
+	 	   								</div>
+	 	   							</li>
+	 	   							<li>
+	 	   								<div class="infoBox">
+	 	   									<h4>Slide 7 Title</h4>
+	 	   									<p>Morbi et orci libero. Ut gravida commodo felis, quis sodales diam scelerisque at. Ut eget libero ligula, sed gravida ante. Suspendisse quis purus quis tortor posuere elementum!</p>
+	 	   								</div>
+	 	   							</li>	      	  				 	 	 	
+  	  				 	 	 	</ul>
+ 	   						</div>	 	   						
+ 	   						<div class="tabPane">
+								 <ul class="controlList clearfix">
+			   	   			         <li><span>Slide 1</span></li>
+			   	   			         <li><span>Slide 2</span></li>
+			   	   			         <li><span>Slide 3</span></li>
+			   	   			         <li><span>Slide 4</span></li>
+			   	   			         <li><span>Slide 5</span></li>
+			   	   			         <li><span>Slide 6</span></li>
+			   	   			         <li><span>Slide 7</span></li>				   	   			         
+								 </ul>
+	   	   					 </div>		 	   						
+ 	   					</div>	 	   					
+ 	   				</section>  <!-- end of section --> 		 	   					 	   				   					 	   					   				 	   				
+	    			
+ 	   			</div><!-- end contentwrap -->  	
+			</div><!-- end #content -->
+		</div><!-- end pagewrap --> 
+    </div><!-- end page -->    	
+    <footer class="clear">
+ 		<div class="footerWrap"> 		   		
+    	</div><!-- end footerwrap --> 
+	</footer><!-- end of footer -->    	
+</div><!--! end of #wrap -->
+<!-- JavaScript at the bottom for fast page loading -->
+	<!-- plugin scripts-->
+	<script src="js/plugins/log.js"></script>
+	<script src="js/plugins/placeholder.js"></script>
+	<!-- custom interface -->
+	<script src="js/interface.js"></script>
+	<!--[if (lt IE 9) & (!IEMobile)]>
+	<script src="js/libs/selectivizr.js"></script>
+	<script src="js/libs/respond.js"></script>
+<![endif]-->
+<!-- end scripts-->
+</body>
+</html>

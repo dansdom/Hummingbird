@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Hummingbird: Tabs Plugin</title>
+	<meta name="description" content="">
+	<meta name="author" content="">	
+	<!--Microsoft. Delete if not required -->
+	<meta http-equiv="cleartype" content="on">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Icons -->
+	<link title="iPhone4" rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ios-114.png">
+	<link title="iPad" rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ios-72.png">
+	<link title="iPhone3" rel="apple-touch-icon-precomposed" href="img/ios.png">
+	<link title="nokia" rel="shortcut icon" href="img/ios.png">
+	<link title="Favicon" rel="shortcut icon" href="/favicon.ico">
+	<!--iOS. Delete if not required -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="apple-touch-startup-image" href="img/splash.png">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->	
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css?v=1">
+	<link rel="stylesheet" href="css/skin.css?v=1">
+	<!-- jQuery and HTML5 script so IE knows how to style the html5 elements -->
+	<script src="js/libs/jquery.js"></script>	
+	<script src="js/libs/html5.js"></script>	
+	
+<!-- ============== Plugin Specific Code  ======================================================================================== -->
+	<script src="js/plugins/tabs.js"></script>	
+	<link rel="stylesheet" href="css/plugins/tabs.css?v=1">
+		
+	<script>
+		$(document).ready(function(){
+			$(".tabPanel1").tabs({
+				'tabNav': '.tabPanel1 .tabNav',
+                'tabContent': '.tabPanel1 .tabContent',
+                'startTab' : 1,                
+                'fadeIn' : false,
+                'fadeSpeed' : 300
+			});	
+			$(".tabPanel2").tabs({
+				'tabNav': '.tabPanel2 .tabNav',
+                'tabContent': '.tabPanel2 .tabContent',
+                'startTab' : 3,                
+                'fadeIn' : true,
+                'fadeSpeed' : 500
+			});
+		});
+	</script>
+</head>
+<div id="wrap" class="clear">
+	<!-- begin #header -->
+	<header id="header" class="clear">
+		<!-- navigation -->
+		<nav role="navigation">
+			<a href="index.html" id="logo"><img src="img/logo-small.png" alt="Pollenizer: Building & Investing In Great Web Businesses" role="banner"></a>
+			<ul role="menu" class="f-right">
+				<li role="menuitem"><a href="index.html">Home</a></li>
+				<li role="menuitem"><a href="markup.html">Markup</a></li>
+				<li role="menuitem"><a href="style.html">Style</a></li>
+				<li role="menuitem"><a href="javascript.html">Javascript</a></li>
+				<li role="menuitem"><a href="styleguide.html">Styleguide</a></li>			
+			</ul>
+		</nav>
+	</header><!-- end #header -->    
+    <!-- begin #page-->
+    <div id="page" class="clear">
+   		<div class="pageWrap">
+	 		<div id="content" role="main">
+	 	   		<div class="contentWrap">
+	 	   				
+ 	   				<section class="module rounded">  
+	 	   				<div class="module">	
+	 	   					<header class="subhead">
+	 	   						<h2>Tabs <em>no effect</em></h2>	 	   						
+	 	   					</header>
+	 	   					<div class="tabPanel1">
+ 	   							<ul class="tabNav">
+ 	   								<li><a href="#">Panel 1</a></li>
+ 	   								<li><a href="#">Panel 2</a></li>
+ 	   								<li><a href="#">Panel 3</a></li>
+ 	   								<li><a href="#">Panel 4</a></li>
+ 	   								<li><a href="#">Panel 5</a></li>
+ 	   							</ul>
+ 	   							<div class="tabContent">
+ 	   								<div class="tab">
+ 	   									<h3>Tab 1 Content</h3>
+ 	   									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend vehicula libero eu aliquam? Sed aliquet vulputate vehicula. Maecenas posuere nisi ut arcu aliquam laoreet.</p>
+ 	   									<p>Donec sit amet tortor non dui lacinia molestie ac vel massa. Ut fermentum, nunc sit amet viverra lacinia, diam massa varius turpis, semper convallis neque leo non quam.</p>
+ 	   									<p>Suspendisse cursus arcu eget elit tempor in aliquam nisi tincidunt. Nulla a justo arcu. Quisque sit amet urna lectus. Nunc in purus diam, eu egestas libero.</p>
+ 	   								</div>
+ 	   								<div class="tab">
+ 	   									<h3>Tab 2 Content</h3>
+ 	   									<p>Aliquam egestas, dolor sit amet feugiat varius, ipsum metus suscipit nibh, a iaculis leo leo id mi. Nunc ultrices purus vitae urna dignissim vehicula? Fusce eget mi massa, eu ornare nunc. Mauris semper augue sed dui commodo eleifend. Ut interdum arcu est, ac ullamcorper lacus. Quisque id felis non odio pretium tincidunt. Fusce a justo sem, a aliquet ipsum.</p>
+ 	   									<p>Nunc porttitor aliquam diam. Nunc ut magna non metus fringilla tempus. Sed in molestie dolor. Mauris eu euismod arcu. Suspendisse urna quam, pulvinar sit amet cursus in, malesuada faucibus odio! Aenean blandit libero sem. Etiam venenatis ligula at orci gravida condimentum vitae et purus.</p> 	   									
+ 	   								</div>
+ 	   								<div class="tab">
+ 	   									<h3>Tab 3 Content</h3>
+ 	   									<ul>
+ 	   										<li>Pellentesque faucibus, dolor a mattis ultrices</li>
+ 	   										<li>Nunc ut magna non metus fringilla tempus</li>
+ 	   										<li>Cras eleifend vehicula libero eu aliquam</li>
+ 	   										<li>Nunc in purus diam, eu egestas libero.</li>
+ 	   										<li>Suspendisse cursus arcu eget elit tempor in aliquam</li>
+ 	   									</ul>
+ 	   								</div>
+ 	   								<div class="tab">
+ 	   									<h3>Tab 4 Content</h3>
+ 	   									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec adipiscing leo quis eros iaculis in accumsan erat tincidunt. Morbi posuere gravida facilisis. Maecenas ut bibendum purus.</p>
+ 	   									<p>Nullam vel diam non ante fringilla fringilla.</p>
+ 	   									<blockquote>
+ 	   										Donec mattis, odio et luctus semper, magna eros facilisis massa, et ultricies risus elit quis sem. Nulla imperdiet, lorem consequat tempor sodales, tortor orci scelerisque arcu, eu placerat neque tortor eget elit.
+ 	   									</blockquote>
+ 	   								</div>
+ 	   								<div class="tab">
+ 	   									<h3>Tab 5 Content</h3>
+ 	   									<p>Nullam vel diam non ante fringilla fringilla.</p>
+ 	   									<ol>
+ 	   										<li>Pellentesque faucibus, dolor a mattis ultrices</li>
+ 	   										<li>Nunc ut magna non metus fringilla tempus</li>
+ 	   										<li>Cras eleifend vehicula libero eu aliquam</li>
+ 	   										<li>Nunc in purus diam, eu egestas libero.</li>
+ 	   										<li>Suspendisse cursus arcu eget elit tempor in aliquam</li>
+ 	   									</ol>
+ 	   								</div>
+ 	   							</div>
+ 	   						</div>					   					
+	 	   				</div><!-- end of section -->	 	   				
+	 	   				<div class="module"> 
+	 	   					<header class="subhead">
+	 	   						<h2>Tabs <em>with fade effect (500ms) and starting on panel 3</em></h2>	 	   						
+	 	   					</header>
+	 	   					<div class="tabPanel2">
+ 	   							<ul class="tabNav">
+ 	   								<li><a href="#">Panel 1</a></li>
+ 	   								<li><a href="#">Panel 2</a></li>
+ 	   								<li><a href="#">Panel 3</a></li>
+ 	   								<li><a href="#">Panel 4</a></li>
+ 	   								<li><a href="#">Panel 5</a></li>
+ 	   							</ul>
+ 	   							<div class="tabContent">
+ 	   								<div class="tab">
+ 	   									<h3>Tab 1 Content</h3>
+ 	   									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend vehicula libero eu aliquam? Sed aliquet vulputate vehicula. Maecenas posuere nisi ut arcu aliquam laoreet.</p>
+ 	   									<p>Donec sit amet tortor non dui lacinia molestie ac vel massa. Ut fermentum, nunc sit amet viverra lacinia, diam massa varius turpis, semper convallis neque leo non quam.</p>
+ 	   									<p>Suspendisse cursus arcu eget elit tempor in aliquam nisi tincidunt. Nulla a justo arcu. Quisque sit amet urna lectus. Nunc in purus diam, eu egestas libero.</p>
+ 	   								</div>
+ 	   								<div class="tab">
+ 	   									<h3>Tab 2 Content</h3>
+ 	   									<p>Aliquam egestas, dolor sit amet feugiat varius, ipsum metus suscipit nibh, a iaculis leo leo id mi. Nunc ultrices purus vitae urna dignissim vehicula? Fusce eget mi massa, eu ornare nunc. Mauris semper augue sed dui commodo eleifend. Ut interdum arcu est, ac ullamcorper lacus. Quisque id felis non odio pretium tincidunt. Fusce a justo sem, a aliquet ipsum.</p>
+ 	   									<p>Nunc porttitor aliquam diam. Nunc ut magna non metus fringilla tempus. Sed in molestie dolor. Mauris eu euismod arcu. Suspendisse urna quam, pulvinar sit amet cursus in, malesuada faucibus odio! Aenean blandit libero sem. Etiam venenatis ligula at orci gravida condimentum vitae et purus.</p> 	   									
+ 	   								</div>
+ 	   								<div class="tab">
+ 	   									<h3>Tab 3 Content</h3>
+ 	   									<ul>
+ 	   										<li>Pellentesque faucibus, dolor a mattis ultrices</li>
+ 	   										<li>Nunc ut magna non metus fringilla tempus</li>
+ 	   										<li>Cras eleifend vehicula libero eu aliquam</li>
+ 	   										<li>Nunc in purus diam, eu egestas libero.</li>
+ 	   										<li>Suspendisse cursus arcu eget elit tempor in aliquam</li>
+ 	   									</ul>
+ 	   								</div>
+ 	   								<div class="tab">
+ 	   									<h3>Tab 4 Content</h3>
+ 	   									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec adipiscing leo quis eros iaculis in accumsan erat tincidunt. Morbi posuere gravida facilisis. Maecenas ut bibendum purus.</p>
+ 	   									<p>Nullam vel diam non ante fringilla fringilla.</p>
+ 	   									<blockquote>
+ 	   										Donec mattis, odio et luctus semper, magna eros facilisis massa, et ultricies risus elit quis sem. Nulla imperdiet, lorem consequat tempor sodales, tortor orci scelerisque arcu, eu placerat neque tortor eget elit.
+ 	   									</blockquote>
+ 	   								</div>
+ 	   								<div class="tab">
+ 	   									<h3>Tab 5 Content</h3>
+ 	   									<p>Nullam vel diam non ante fringilla fringilla.</p>
+ 	   									<ol>
+ 	   										<li>Pellentesque faucibus, dolor a mattis ultrices</li>
+ 	   										<li>Nunc ut magna non metus fringilla tempus</li>
+ 	   										<li>Cras eleifend vehicula libero eu aliquam</li>
+ 	   										<li>Nunc in purus diam, eu egestas libero.</li>
+ 	   										<li>Suspendisse cursus arcu eget elit tempor in aliquam</li>
+ 	   									</ol>
+ 	   								</div>
+ 	   							</div>
+ 	   						</div>					   					
+	 	   				</section>  <!-- end of section -->		 	   					 	   					   					 	   					   					 	   				 					 	   					
+	 	   					
+	 	   			</div><!-- end contentwrap -->  	
+			</div><!-- end #content -->
+		</div><!-- end pagewrap --> 
+    </div><!-- end page -->    	
+    <footer class="clear">
+ 		<div class="footerWrap"> 		   		
+    	</div><!-- end footerwrap --> 
+	</footer><!-- end of footer -->    	
+</div><!--! end of #wrap -->
+<!-- JavaScript at the bottom for fast page loading -->
+	<!-- plugin scripts-->
+	<script src="js/plugins/log.js"></script>
+	<script src="js/plugins/placeholder.js"></script>
+	<!-- custom interface -->
+	<script src="js/interface.js"></script>
+	<!--[if (lt IE 9) & (!IEMobile)]>
+	<script src="js/libs/selectivizr.js"></script>
+	<script src="js/libs/respond.js"></script>
+<![endif]-->
+<!-- end scripts-->
+</body>
+</html>

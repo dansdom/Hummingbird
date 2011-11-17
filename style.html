@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Hummingbird: Styleguide</title>
+	<meta name="description" content="">
+	<meta name="author" content="">	
+	<!--Microsoft. Delete if not required -->
+	<meta http-equiv="cleartype" content="on">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Icons -->
+	<link title="iPhone4" rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ios-114.png">
+	<link title="iPad" rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ios-72.png">
+	<link title="iPhone3" rel="apple-touch-icon-precomposed" href="img/ios.png">
+	<link title="nokia" rel="shortcut icon" href="img/ios.png">
+	<link title="Favicon" rel="shortcut icon" href="/favicon.ico">
+	<!--iOS. Delete if not required -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="apple-touch-startup-image" href="img/splash.png">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->	
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css?v=1">
+	<link rel="stylesheet" href="css/skin.css?v=1">
+	<!-- jQuery and HTML5 script so IE knows how to style the html5 elements -->
+	<script src="js/libs/jquery.js"></script>	
+	<script src="js/libs/html5.js"></script>		
+</head>
+<body class="homepage">		
+<div id="wrap" class="clear">
+	<!-- begin #header -->
+	<header id="header" class="clear">
+		<!-- navigation -->
+		<nav role="navigation">
+			<a href="index.html" id="logo"><img src="img/logo-small.png" alt="Pollenizer: Building & Investing In Great Web Businesses" role="banner"></a>
+			<ul role="menu" class="f-right">
+				<li role="menuitem"><a href="index.html">Home</a></li>
+				<li role="menuitem"><a href="markup.html">Markup</a></li>
+				<li role="menuitem"><a href="style.html">Style</a></li>
+				<li role="menuitem"><a href="javascript.html">Javascript</a></li>
+				<li role="menuitem"><a href="styleguide.html">Styleguide</a></li>
+			</ul>
+		</nav> 
+	</header><!-- end #header -->    
+    <!-- begin #page-->
+    <div id="page" class="clear">
+   		<div class="pageWrap">
+	 		<div id="content" role="main">
+	 	   		<div class="contentWrap">
+
+<!-- ============== TYPOGRAPHY  ======================================================================================== -->	
+ 	   				<section role="region" class="rounded">	 	   				
+	 	   				
+	 	   				<div class="exampleCode">
+	 	   					<h2>Honeycomb CSS</h2>
+	 	   					<p>There are two CSS files associated with each project (there is also a print style which contains basic print styling, but it is not anticipated that this should be included in most of our projects).</p>
+	 	   					<ol>
+	 	   						<li>style.css</li>
+	 	   						<li>skin.css</li>	 	   						
+	 	   					</ol>
+	 	   					<p>Style.css contains all the resets, general typography, form layouts, core page layouts including the grid system and device specific resets. This file is 'static' and should not need to be changed at all. Skin.css will contain styles to overwrite the default/reset style, helpers class styles, module and page specific style, plugin styles and the media rules. Skin.css contains a basic style which will be overwritten as needed to suit each new project.</p>
+	 	   					<h3>Style.css</h3>
+	 	   					<p>The first block of code is the reset css. This is based on <a href="http://meyerweb.com/eric/thoughts/2011/01/03/reset-revisited/">Eric Meyer's Reset Revisited</a> and includes HTML5 elements. One interesting line in this code not in Eric's reset is: <code>html>body img {*-ms-interpolation-mode:bicubic}</code> which improves the rendering of "stretched" images on IE7. The form elements have a reset section here too.</p>
+	 	   					<p>Below this is the typographical base. Basic styles for the headers, quotes, list styles and tables are defined here. The headers and body text are based on the <a href="http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography-part-4">Typographical Scale</a> with the body text being set to 'pica'.</p>
+	 	   					<p>Next is the core layout of the page followed by the grid. If there was one thing that might be changed on our projects would be this layout (if the grid system was not being used). On screens with a maximum width of 620px all grid elements lose their floats and width values, thus stacking on top of each other.</p>
+	 	   					<p>There are two types of form layouts in style.css. The regular form places labels alongside the input elements. This form layout is for a form inside of a large block. The second layout is for narrow forms and mobile layouts. In this form the labels are not floating and sit above the input elements. Simply put on the class 'form-stack' to the form elements for this layout. Both of these are described in style.css. There are also several helper classes for the forms. Inputs can have the class 'small' or 'large'. Error fields that use the validation plugin will pick up either the class 'error' or 'help'. Other classes for form inputs include: 'submitField', 'fieldBox', 'radioField', 'checkField' and 'fieldLabel'.</p>
+	 	   					<p>The media rules at the bottom of this file are for general layout when using the grid system on a mobile device and the form elements on small screens. These should not be elaborated on. All other media CSS should be put at the end of skin.css.</p>
+	 	   					<h3>Skin.css</h3>
+	 	   					<p>The top of this document is where any external resources should be located. e.g. all fonts will be embedded here. Our preference is to use <a href="http://www.google.com/webfonts">Google Fonts</a> if we can otherwise use the <a href="http://www.fontsquirrel.com/fontface/generator">Font Squirrel Generator</a> to create the code to embed the font.</p>
+	 	   					<p>Site wide CSS such as the document background and link colours are next. This section should include the anchor suedo-classes as well as any other site wide suedo-classes or overwrites of the resets in style.css.</p>
+	 	   					<p>Each section after this contains either modules, page style or generic classes used for the site.  Each module/page should be seperated by a blank line for easy scanning. Generally each selector in the module should start with the same element so that specificity is maintained and also to improve readability of the code. Each section should be commented as well. This applies to all sections in the CSS.</p>
+	 	   					<p>There are some general classes that should be mentioned here. These cover elements whose markup may change depending on their role, but their style will be common. These elements will share a common class. For example: every button in a site may look the same, however some of these buttons may be anchor tags, and some of them may be submit buttons in forms. These will all have the same class. Our convention is to use the class 'btn'. On top of this there may be different states of the button. A 'hover', 'disabled', 'small' or 'error' state may be needed for this button. In this case an extra class will go onto the element, and styled thus.</p>
+	 	   					<p>Once all the modules and pages for the site are declared, then the styles for the Javascript plugins are the declared. These should be treated in the same way as other page modules. Each plugin style should be commented and separated by white space to increase readability.</p>
+	 	   					<p>All <a nref="http://www.w3.org/TR/css3-transitions/">CSS3 transitions</a> should be declared in one place. These would go under the plugin style.</p>
+	 	   					<p>Last but not least are the <a href="http://www.w3.org/TR/css3-mediaqueries/">media rules</a> for different screen sizes and resolutions. These are put at the end of the document so that browsers which don't understand @media rules will be able to render the site without needing them. The smallest screen layout goes first followed by the next all the way up to the largest. Each larger size will over-write the last one. Iphone retina display comes last. The retina display will use mainly the 320 and 480 layouts and is mainly used to define high resolution images and thus needs to be after these rules.</p>
+	 	   				</div>  <!-- end of exampleCode -->	    					 	   							 	   				
+		    		
+		    		</section>
+		 		</div><!-- end contentwrap -->  	
+			</div><!-- end #content -->
+		</div><!-- end pagewrap --> 
+    </div><!-- end page -->    	
+    <footer class="clear">
+ 		<div class="footerWrap"> 		   		
+    	</div><!-- end footerwrap --> 
+	</footer><!-- end of footer -->    	
+</div><!--! end of #wrap -->
+<!-- JavaScript at the bottom for fast page loading -->
+	<!-- plugin scripts-->
+	<script src="js/plugins/log.js"></script>
+	<script src="js/plugins/placeholder.js"></script>
+	<!-- custom interface -->
+	<script src="js/interface.js"></script>
+	<!--[if (lt IE 9) & (!IEMobile)]>
+	<script src="js/libs/selectivizr.js"></script>
+	<script src="js/libs/respond.js"></script>
+<![endif]-->
+<!-- end scripts-->
+</body>
+</html>

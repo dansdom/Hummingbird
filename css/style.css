@@ -1,0 +1,191 @@
+/* Pollenizer v1.0
+ * Released: November 2011
+ * Respect: Twitter Bootstrap (twitter.github.com/bootstrap) & Eric Meyer (meyerweb.com).
+ * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* RESET  
+ * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,hr,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {margin:0;padding:0;border:0;font-size:100%;font:inherit;outline:0;vertical-align:baseline;-webkit-font-smoothing:antialiased}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block}
+html {background:white;height:100%;font:62.5%/1.4 "helvetica neue",helveticaneue,helveticaneueroman,"helvetica neue roman",Helvetica,Arial,sans-serif;overflow-y:scroll}
+body {background:white;min-height:100%;font-size:1.2em}
+table {border-collapse:collapse;border-spacing:0}
+td {vertical-align:top}
+input,select {vertical-align:middle}
+nav ul,nav ol,nav li {margin:0;padding:0;list-style:none;list-style-image:none}
+img,a img {border:0}
+html>body img {*-ms-interpolation-mode:bicubic}
+a {color:#09f;outline:none}
+a:hover,a:active {outline:none}
+/* Form elements  */
+legend {*margin-left:-7px} 
+textarea {overflow:auto}
+input[type="radio"] {vertical-align:text-bottom}
+input[type="button"],input[type="submit"],input[type="image"],button {cursor:pointer}
+input[type="checkbox"] {vertical-align:bottom;*vertical-align:baseline}
+button,input,select,textarea {margin:0}
+input:invalid,textarea:invalid {background:#f0dddd}
+button {width:auto;overflow:visible}
+select,input,textarea,button {font:99% sans-serif}
+option,select {min-width:1.5em} 
+/*  Typography  */
+html {-webkit-text-size-adjust:none}
+sub,sup {font-size:0.72em;line-height:0;position:relative}
+sup {top:-0.5em}
+sub {bottom:-0.25em}
+pre {padding:15px;white-space:pre;white-space: pre-wrap;white-space:pre-line;word-wrap:break-word}
+pre,code,kbd,samp {font-family:"Courier New",Courier,monospace,sans-serif}
+strong,th,b,strong,h1,h2,h3,h4,h5,h6 {font-weight:bold}
+em {font-style:italic}
+/*  based on body text being "small pica" on typography scale */
+h1 {font-size:3.27em}
+h2 {font-size:2.18em}
+h3 {font-size:1.64em}
+h4 {font-size:1.45em}
+h5 {font-size:1.18em}
+h6 {font-size:1em}
+h1 em,h2 em,h3 em,h4 em,h5 em,h6 em {font-style:normal;font-weight:normal;font-size:50%;color:#999;letter-spacing:-0.01em;white-space:nowrap}
+small {font-size:0.81em}
+ul,ol {padding-left:2em}
+ol li {list-style-type:decimal}
+ul li {list-style-type:disc}
+dl dt {font-weight:bold}
+dl dd {margin:0 0 15px 10px}
+hr {display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+ins {background-color:#ff9;color:#000;text-decoration:none;}
+mark {background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del {text-decoration:line-through}
+blockquote,q {quotes:none;padding:15px}
+blockquote p:before,blockquote p:after,q:before,q:after {content:'"';}
+blockquote small {display:block;color:#999;text-align:right;font-size:1em}
+/*  generic table style  */
+table {width:100%;text-align:left;border-collapse:collapse}
+table th {font-weight:bold;padding:5px;border:1px solid #ddd}
+table td {padding:5px;border:1px solid #ddd}
+/* These selection declarations have to be separate */
+::-moz-selection {background:#09f;color:#fff;text-shadow:none}
+::selection {background:#09f;color:#fff;text-shadow:none}
+:focus {outline:0}
+
+/* LAYOUT  
+ * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+#wrap,#page,#footer {clear:both}
+#wrap {margin:0 auto}
+footer {clear:both}
+p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset,blockquote,.module {margin-bottom:15px}
+/*  Grid  */
+.grid {clear:both;width:100%;max-width:1140px;margin:0 auto 15px auto;padding:0;overflow:hidden}
+[class^="grid-"]{margin-right:3.8%;float:left;min-height:1px}
+.grid-1 {width:4.85%}
+.grid-2 {width:13.45%}
+.grid-3 {width:22.05%}
+.grid-4 {width:30.75%}
+.grid-5 {width:39.45%}
+.grid-6 {width:48%}
+.grid-7 {width:56.75%}
+.grid-8 {width:65.4%}
+.grid-9 {width:74.05%}
+.grid-10 {width:82.7%}
+.grid-11 {width:91.35%}
+.grid-12 {width:100%;margin:0}
+.grid > .last {margin-right:0}
+.clear:before,.clear:after,.grid:before,.grid:after {display:table;content:"";zoom:1;*display:inline}
+.clear:after,.grid:after{clear:both}
+.clear,.grid {zoom:1;display:block}
+
+/* FORMS  
+ * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+form fieldset {clear:both;display:block}
+form ul {margin:0;padding:0}
+form li {list-style:none;padding:5px 0;margin:3px 0;display:block;clear:both;overflow:hidden}
+form li > label {display:block;float:left;text-align:right;margin:1% 2% 0 0;width:35%}
+form li p {display:block;float:left;width:35%}
+form legend {display:block;font-size:1em;line-height:1;padding:0 0 10px 37%;font-weight:bold}
+label,input,select,textarea {font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:normal;margin:0 1% 0 0;}
+input,textarea,select,.uneditable-input,form input[type="file"] {width:35%;border:1px solid #ccc;display:inline-block;font-size:13px;height:18px;padding:4px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}
+input.large,textarea.large,select.large {width:50%}
+input.small,textarea.small,select.small {width:10%}
+form select,form input[type="file"] {height:27px}
+input[disabled],select[disabled],textarea[disabled],input[readonly],select[readonly],textarea[readonly] {background-color:#F5F5F5;border-color:#ddd;cursor:not-allowed}
+select[multiple] {height:inherit}
+textarea {height:auto;overflow-y:auto}
+form input.submitField {margin-left:37%}
+form li.help, form li.error {padding:5px 10px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}
+form li.help {background:#e5f9db;color:#390}
+form li.error {background:#FAE5E3;color:#c01702}
+form li.error input,form li.error textarea,form li.error select,form li.error .form-input {border-color:#c01702}
+form li > em {display:inline-block;font-style:normal;font-size:0.9em;font-weight:bold;margin-left:37%}
+form li > em.error .help {color:#390}
+form li > em.error {color:#c01702}
+form li .btn {display:inline-block}
+:-moz-placeholder {color:#ccc}
+::-webkit-input-placeholder {color:#ccc}
+/* radio and selectbox fields  */
+.fieldBox {width:200px;float:left}
+.fieldBox span {clear:both;width:100%;display:block}
+.fieldLabel {text-align:right}
+/*stacked forms */
+.form-stacked input,.form-stacked textarea,.form-stacked select,.form-stacked .uneditable-input {display:block;width:75%}
+.form-stacked li > label, .form-stacked .fieldLabel {width:auto;float:none;margin:0 0 5px 0;text-align:left}
+.form-stacked legend {padding:0 0 10px 0}
+.form-stacked .radioField, .form-stacked .checkField {display:inline;width:auto}
+.form-stacked .btn {width:auto}
+.form-stacked li > em {margin:0}
+.form-stacked li > em.error {clear:both;display:block;height:1.3em}
+.form-stacked input.submitField {margin-left:0}
+/* effects */
+input,textarea {-webkit-transition:border linear 0.2s,box-shadow linear 0.2s;-moz-transition:border linear 0.2s,box-shadow linear 0.2s;-ms-transition:border linear 0.2s,box-shadow linear 0.2s;-o-transition:border linear 0.2s,box-shadow linear 0.2s;transition:border linear 0.2s,box-shadow linear 0.2s;-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,0.1);-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,0.1);box-shadow:inset 0 1px 3px rgba(0,0,0,0.1)}
+input:focus,textarea:focus {outline:0;border-color:rgba(82, 168, 236, 0.8);-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,0.1), 0 0 8px rgba(82,168,236,0.6);-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,0.1),0 0 8px rgba(82,168,236,0.6);box-shadow:inset 0 1px 3px rgba(0,0,0,0.1),0 0 8px rgba(82,168,236,0.6)}
+input[type="submit"]:hover {-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none;transition:none}
+input[type=file]:focus, input[type=checkbox]:focus, select:focus {-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;outline:1px dotted #666}
+
+/* NAVIGATION 
+ * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+nav li {display:inline-block;width:auto}
+
+/* MODULES 
+ * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/*  Defaults  */
+.module {position:relative}
+.t-right {text-align:right}
+.t-left {text-align:left}
+.t-center {text-align:center}
+.f-right {float:right}
+.f-left {float:left}
+.f-center {float:none;margin:0 auto}
+.ir {display:block;overflow:hidden;background-repeat:no-repeat;text-align:left;text-indent:-9000em;direction:ltr}
+/*  List styles  */
+ul.list {padding:0}
+ul.list li {list-style:none}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   MEDIA QUERIES  
+*  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/*  iPhone Portrait  */
+@media screen and (max-width:480px) {
+#wrap {width:auto;margin:0 1%}
+[class^="grid-"]{float:none;width:auto;margin:0 0 15px 0;clear:both}
+input,textarea,select,.uneditable-input {display:block}
+input.small,textarea.small,select.small {width:50%}
+input,textarea,select,.uneditable-input {width:75%}
+input.large,textarea.large,select.large {width:96%}
+form li > label {width:auto;float:none;margin:0 0 5px 0;text-align:left}
+form li > em {margin:0}
+form legend {padding:0 0 10px 0}
+}
+
+/* Print */
+@media print {
+* {background:transparent !important;color:black !important;text-shadow:none !important;filter:none !important;-ms-filter:none !important} 
+a,a:visited {color:#444 !important; text-decoration:underline}
+a[href]:after {content:" (" attr(href) ")"}
+abbr[title]:after {content:" (" attr(title) ")"}
+a[href^="javascript:"]:after,a[href^="#"]:after {content:""}
+pre,blockquote {border:1px solid #999;page-break-inside:avoid}
+thead {display:table-header-group}
+tr,img {page-break-inside:avoid}
+#wrap,#page {width:100%;margin:0}
+@page {}
+p,h2,h3 {orphans:3;widows:3}
+h2,h3 {page-break-after:avoid}
+section {page-break-inside:avoid;page-break-before:avoid;color:red}
+}

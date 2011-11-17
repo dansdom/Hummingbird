@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Hummingbird: Google Map Plugin</title>
+	<meta name="description" content="">
+	<meta name="author" content="">	
+	<!--Microsoft. Delete if not required -->
+	<meta http-equiv="cleartype" content="on">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Icons -->
+	<link title="iPhone4" rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ios-114.png">
+	<link title="iPad" rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ios-72.png">
+	<link title="iPhone3" rel="apple-touch-icon-precomposed" href="img/ios.png">
+	<link title="nokia" rel="shortcut icon" href="img/ios.png">
+	<link title="Favicon" rel="shortcut icon" href="/favicon.ico">
+	<!--iOS. Delete if not required -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="apple-touch-startup-image" href="img/splash.png">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->	
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css?v=1">
+	<link rel="stylesheet" href="css/skin.css?v=1">
+	<!-- jQuery and HTML5 script so IE knows how to style the html5 elements -->
+	<script src="js/libs/jquery.js"></script>	
+	<script src="js/libs/html5.js"></script>	
+	
+<!-- ============== Plugin Specific Code  ======================================================================================== -->
+	<script language="javascript" type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>     
+    <script language="javascript" type="text/javascript" src="js/libs/markercluster.js"></script> 
+    <script language="javascript" type="text/javascript" src="js/plugins/map1.1.js"></script>  
+	<script>
+		$(document).ready(function()
+		{
+			$("#mapDiv").MapMe({
+					mapCanvas : 'mapDiv',
+					pinCenter : true, 
+                    trackLocation : false,
+                    trackingPeriod : false, 
+                    trackingCircle : false,
+					markerCluster : true,
+					markers : [							  				
+								{
+									title: 'Bondi Beach', 
+									lat: -33.890542, 
+									lng: 151.274856, 
+									pin: "demoPin", 
+									infoWindow: "<h1>Bondi Info Window Content</h1><p>lorem ipsum</p>",
+									pinEvent: {
+										'click': function(){alert("you clicked me!");},
+										'mouseover' : function(){console.log("you moused over me!");}}},
+								{
+									title: 'Coogee Beach', 
+									lat: -33.923036, 
+									lng: 151.259052, 
+									pin: "demoPin", 
+									infoWindow: "<h1>Coogee Info Window Content</h1><p>lorem ipsum</p>"},
+								{
+									title: 'Cronulla Beach', 
+									lat: -34.028249, 
+									lng: 151.157507, 
+									pin: "demoPin", 
+									infoWindow: "<h1>Cronulla Info Window Content</h1><p>lorem ipsum</p>",
+									pinEvent: {
+										'click': function(){alert("you clicked me too!!!");},
+										'mouseover' : function(){console.log("you dare mouse over me!!!");}}},
+								{
+									title: 'Manly Beach', 
+									lat: -33.80010128657071, 
+									lng: 151.28747820854187, 
+									pin: false, 
+									infoWindow: false},
+								{
+									title: 'Maroubra Beach', 
+									lat: -33.950198, 
+									lng: 151.259302, 
+									pin: "demoPin", 
+									infoWindow: "<h1>Maroubra Info Window Content</h1><p>lorem ipsum</p>"}
+							  ],
+					customPins :	{							  					
+							  			"demoPin" : {
+							  									pinImg : "img/plugins/googlemap/pin.png",
+							  									pinImgSize : [36, 55],
+							  									pinOrigin : [0,0],
+							  									pinAnchor : [18, 55],
+							  									pinShape : 	{coord: [1, 1, 1, 36, 55, 36, 55, 1], type: 'poly'},
+							  									pinShadow : "img/plugins/googlemap/pin-shadow.png",
+							  									pinShadowSize : [77, 58],
+							  									pinShadowOrigin : [0,0],
+							  									pinShadowAnchor : [22,55]
+							  							}
+							  				},
+					mapOptions : 	{center : [-33.882542, 151.211856]}					   
+				});	 							
+		});
+	</script>
+</head>
+<div id="wrap" class="clear">
+	<!-- begin #header -->
+	<header id="header" class="clear">
+		<!-- navigation -->
+		<nav role="navigation">
+			<a href="index.html" id="logo"><img src="img/logo-small.png" alt="Pollenizer: Building & Investing In Great Web Businesses" role="banner"></a>
+			<ul role="menu" class="f-right">
+				<li role="menuitem"><a href="index.html">Home</a></li>
+				<li role="menuitem"><a href="markup.html">Markup</a></li>
+				<li role="menuitem"><a href="style.html">Style</a></li>
+				<li role="menuitem"><a href="javascript.html">Javascript</a></li>
+				<li role="menuitem"><a href="styleguide.html">Styleguide</a></li>				
+			</ul>
+		</nav>
+	</header><!-- end #header -->    
+    <!-- begin #page-->
+    <div id="page" class="clear">
+   		<div class="pageWrap">
+	 		<div id="content" role="main">
+	 	   		<div class="contentWrap">
+	 	   				
+ 	   				<section class="module rounded"> 
+	 	   					<header class="subhead">
+	 	   						<h2>Googlemap Demo <em>using markerClusterer with defined 5 pin locations, 1 custon pin icon and a pin put on the center of the map</h2>
+	 	   					</header>
+	 	   					<div id="mapDiv" style="width:100%;height:500px"></div>  <!-- end of mapDiv -->
+	 	   				</section>  <!-- end of section -->	 	   						 	   					 	   					 	   				 					 	   					
+	 	   					
+	 	   			</div><!-- end contentwrap -->  	
+			</div><!-- end #content -->
+		</div><!-- end pagewrap --> 
+    </div><!-- end page -->    	
+    <footer class="clear">
+ 		<div class="footerWrap"> 		   		
+    	</div><!-- end footerwrap --> 
+	</footer><!-- end of footer -->    	
+</div><!--! end of #wrap -->
+<!-- JavaScript at the bottom for fast page loading -->
+	<!-- plugin scripts-->
+	<script src="js/plugins/log.js"></script>
+	<script src="js/plugins/placeholder.js"></script>
+	<!-- custom interface -->
+	<script src="js/interface.js"></script>
+	<!--[if (lt IE 9) & (!IEMobile)]>
+	<script src="js/libs/selectivizr.js"></script>
+	<script src="js/libs/respond.js"></script>
+<![endif]-->
+<!-- end scripts-->
+</body>
+</html>

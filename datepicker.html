@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Hummingbird: Datepicker Plugin</title>
+	<meta name="description" content="">
+	<meta name="author" content="">	
+	<!--Microsoft. Delete if not required -->
+	<meta http-equiv="cleartype" content="on">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Icons -->
+	<link title="iPhone4" rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ios-114.png">
+	<link title="iPad" rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ios-72.png">
+	<link title="iPhone3" rel="apple-touch-icon-precomposed" href="img/ios.png">
+	<link title="nokia" rel="shortcut icon" href="img/ios.png">
+	<link title="Favicon" rel="shortcut icon" href="/favicon.ico">
+	<!--iOS. Delete if not required -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="apple-touch-startup-image" href="img/splash.png">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->	
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css?v=1">
+	<link rel="stylesheet" href="css/skin.css?v=1">
+	<!-- jQuery and HTML5 script so IE knows how to style the html5 elements -->
+	<script src="js/libs/jquery.js"></script>	
+	<script src="js/libs/html5.js"></script>	
+	
+<!-- ============== Plugin Specific Code  ======================================================================================== -->
+	<link rel="stylesheet" href="css/jqueryUI/jquery-ui.css?v=1">
+	<link rel="stylesheet" href="css/plugins/timepicker.css?v=1">
+	<script src="js/libs/jquery-ui.js"></script>	
+	<script src="js/plugins/timepicker.js"></script>		
+	<script>
+		$(document).ready(function(){
+		
+			// datepicker 1 
+			$(".datepicker1").datepicker();
+			
+			// datepicker 2 
+			$(".datepicker2").datepicker({
+				showOn: "button",
+				buttonImage: "img/plugins/calendar.gif",
+				buttonImageOnly: true
+			});
+			
+			// datepicker 3 
+			var dates = $(".datepicker3").datepicker({					
+				numberOfMonths: 3,
+				changeMonth : true,				
+				onSelect: function( selectedDate ) {
+					var option = this.id == "from" ? "minDate" : "maxDate",
+						instance = $( this ).data( "datepicker" ),
+						date = $.datepicker.parseDate(
+							instance.settings.dateFormat ||
+							$.datepicker._defaults.dateFormat,
+							selectedDate, instance.settings );
+					dates.not( this ).datepicker( "option", option, date );
+				}
+			});									
+			   
+			// datepicker 4 
+        	// here is the list of dates in the datepicker (as an array) that will be selectable.
+        	// just going to grab the next 7 days and insert that into the selectable dates array
+        	var currentDate = new Date(),
+        		day = currentDate.getDate(),
+        		month = currentDate.getMonth() + 1,
+        		year = currentDate.getFullYear(),
+        		selectableDates = [];
+        	for (i = 0; i < 7 ;i++)
+        	{
+        		var nextDay = (day + i) + "-" + (month) + "-" + (year);        		
+        		selectableDates[nextDay] = 1;        		
+        	}
+  		 	
+  		 	
+  			$(".datepicker4").datepicker({
+    			dateFormat: 'dd-mm-yy',
+    			minDate: '+0d',
+    			maxDate: '+1y',
+    			beforeShowDay: function(date)
+    			{
+	    			var dateStr = [
+	    					date.getDate(),
+	    					date.getMonth() + 1,
+	    					date.getFullYear()
+	    			].join('-');    				    			
+	    			if (selectableDates[dateStr] != 1)
+	    			{	    				 				
+	    				return [false, 'notAllowed', 'This date is not available'];    				
+	    			}
+	    			else
+	    			{	    				
+	    				return [true, 'allowed', 'This date is available'];
+	    			}
+    			}
+    		});
+    		
+    		// timepicker 1 
+    		$(".timepicker1").datetimepicker();
+    		
+    		// timepicker 2
+    		$(".timepicker2").timepicker({ampm:true});
+		});
+	</script>
+</head>
+<div id="wrap" class="clear">
+	<!-- begin #header -->
+	<header id="header" class="clear">
+		<!-- navigation -->
+		<nav role="navigation">
+			<a href="index.html" id="logo"><img src="img/logo-small.png" alt="Pollenizer: Building & Investing In Great Web Businesses" role="banner"></a>
+			<ul role="menu" class="f-right">
+				<li role="menuitem"><a href="index.html">Home</a></li>
+				<li role="menuitem"><a href="markup.html">Markup</a></li>
+				<li role="menuitem"><a href="style.html">Style</a></li>
+				<li role="menuitem"><a href="javascript.html">Javascript</a></li>
+				<li role="menuitem"><a href="styleguide.html">Styleguide</a></li>				
+			</ul>
+		</nav>
+	</header><!-- end #header -->    
+    <!-- begin #page-->
+    <div id="page" class="clear">
+   		<div class="pageWrap">
+	 		<div id="content" role="main">
+	 	   		<div class="contentWrap">
+	 	   				
+ 	   				<section class="rounded"> 
+ 	   					<div class="module datePicker">
+	 	   					<header class="subhead">
+	 	   						<h2>Standard Datepicker <em>default options</em></h2>
+	 	   					</header>
+	 	   					<input type="text" class="datepicker1" placeholder="enter date" />						   					
+ 	   					</div>
+ 	   					<div class="module datePicker">
+ 	   						<header class="subhead">
+ 	   							<h2>Datepicker with Icon <em></em></h2>
+ 	   						</header>
+ 	   						<input type="text" class="datepicker2" placeholder="enter date" />						   					
+ 	   					</div>
+ 	   					<div class="module datePicker">
+ 	   						<header class="subhead">
+ 	   							<h2>Date Range Datepicker <em>showing 3 months</em></h2>
+ 	   						</header>
+ 	   						<span>from:</span>
+ 	   						<input type="text" id="from" class="datepicker3" placeholder="enter date" />
+ 	   						<span>to:</span>
+ 	   						<input type="text" id="to" class="datepicker3" placeholder="enter date" />							   					
+ 	   					</div>
+ 	   					<div class="module datePicker">
+	 	   					<header class="subhead">
+	 	   						<h2>Selectable Dates Datepicker <em>for next 7 days</em></h2>
+	 	   					</header>
+ 	   						<input type="text" class="datepicker4" placeholder="enter date" />						   					
+ 	   				 	</div>
+ 	   					<div class="module datePicker">
+	 	   					<header class="subhead">
+	 	   						<h2>Date and Time Picker <em>datepicker with timerpicker addon as well</em></h2>
+	 	   					</header>
+	 	   					<input type="text" class="timepicker1" placeholder="enter date" />						   					
+ 	   					</div>
+ 	   					<div class="module datePicker">
+ 	   						<header class="subhead">
+	 	   						<h2>Time Picker Only <em>with no datepicker and AM/PM option set to true</eM></h2>
+	 	   					</header>
+	 	   					<input type="text" class="timepicker2" placeholder="enter date" />
+	 	   				</div>						   					
+ 	   				</section>  <!-- end of section -->		   					 	   				 					 	   					
+ 	   					
+ 	   			</div><!-- end contentwrap -->  	
+			</div><!-- end #content -->
+		</div><!-- end pagewrap --> 
+    </div><!-- end page -->    	
+    <footer class="clear">
+ 		<div class="footerWrap"> 		   		
+    	</div><!-- end footerwrap --> 
+	</footer><!-- end of footer -->    	
+</div><!--! end of #wrap -->
+<!-- JavaScript at the bottom for fast page loading -->
+	<!-- plugin scripts-->
+	<script src="js/plugins/log.js"></script>
+	<script src="js/plugins/placeholder.js"></script>
+	<!-- custom interface -->
+	<script src="js/interface.js"></script>
+	<!--[if (lt IE 9) & (!IEMobile)]>
+	<script src="js/libs/selectivizr.js"></script>
+	<script src="js/libs/respond.js"></script>
+<![endif]-->
+<!-- end scripts-->
+</body>
+</html>

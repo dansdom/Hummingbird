@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Hummingbird: Validation Plugin</title>
+	<meta name="description" content="">
+	<meta name="author" content="">	
+	<!--Microsoft. Delete if not required -->
+	<meta http-equiv="cleartype" content="on">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Icons -->
+	<link title="iPhone4" rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ios-114.png">
+	<link title="iPad" rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ios-72.png">
+	<link title="iPhone3" rel="apple-touch-icon-precomposed" href="img/ios.png">
+	<link title="nokia" rel="shortcut icon" href="img/ios.png">
+	<link title="Favicon" rel="shortcut icon" href="/favicon.ico">
+	<!--iOS. Delete if not required -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="apple-touch-startup-image" href="img/splash.png">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->	
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css?v=1">
+	<link rel="stylesheet" href="css/skin.css?v=1">
+	<!-- jQuery and HTML5 script so IE knows how to style the html5 elements -->
+	<script src="js/libs/jquery.js"></script>	
+	<script src="js/libs/html5.js"></script>	
+	
+<!-- ============== Plugin Specific Code  ======================================================================================== -->	
+	<link rel="stylesheet" href="css/plugins/validator.css?v=1">
+	<script src="js/plugins/validator1.4a.js"></script>	
+	<script>
+		$(document).ready(function()
+		{
+			// normal form	
+			$("#validatorForm1").validator({
+				inputTypes:{
+					firstname: {
+									inputName: 'firstname1',
+									rules: {min:2,max:20},
+									error: 'min 2, max 20 chars allowed',
+									valid: 'this field is ok'
+								},
+					lastname: {
+									inputName: 'lastname1',
+									rules: {min:2,max:20},
+									error: 'min 2, max 20 chars allowed',
+									valid: 'this field is ok'
+								},
+					enquiry: 	{
+									inputName: 'enquiry1',
+									rules: {min:2,max:100},
+									error: 'max of 100 chars'
+								},
+					password: 	{
+									inputName: 'password1',
+									rules: {min:2,max:12,validPassword:true},
+									error: 'enter a valid password'
+								},
+					confirmpassword: 	{
+									inputName: 'confirmpassword1',
+									rules: {passConfirm:true},
+									error: 'password does not match',
+									valid: 'the password matches!'
+								},
+					radioField: {
+									inputName: 'radio1',
+									rules: {radioReq:true},
+									error: 'field is required',
+									valid: 'thank you!'
+								},
+					checkField: {
+									inputName: 'checkbox1',
+									rules: {checkboxMin:1},
+									error: 'please select at least one option',
+									valid: 'thanks'
+								},
+					selectField: {	
+									inputName: 'selectbox1',
+									rules: {selectHasValue: true,selectNull: '-please select-'},
+									error: 'please select one'
+								},
+					fileData:	{
+									inputName: 'file1',
+									rules: {fileType: 'gif,png,jpg'},
+									error: 'the file must be .gif, .png or .jpg'
+								}
+				},
+				formClasses : { validClass : "help" }
+			});
+			
+			// stacked form
+			$("#validatorForm2").validator({
+				inputTypes:{
+					firstname: {
+									inputName: 'firstname2',
+									rules: {min:2,max:20},
+									error: 'min 2, max 20 chars allowed',
+									valid: 'this field is ok'
+								},
+					lastname: {
+									inputName: 'lastname2',
+									rules: {min:2,max:20},
+									error: 'min 2, max 20 chars allowed',
+									valid: 'this field is ok'
+								},
+					enquiry: 	{
+									inputName: 'enquiry2',
+									rules: {min:2,max:100},
+									error: 'max of 100 chars'
+								},
+					password: 	{
+									inputName: 'password2',
+									rules: {min:2,max:12,validPassword:true},
+									error: 'enter a valid password'
+								},
+					confirmpassword: 	{
+									inputName: 'confirmpassword2',
+									rules: {passConfirm:true},
+									error: 'password does not match',
+									valid: 'the password matches!'
+								},
+					radioField: {
+									inputName: 'radio2',
+									rules: {radioReq:true},
+									error: 'field is required',
+									valid: 'thank you!'
+								},
+					checkField: {
+									inputName: 'checkbox2',
+									rules: {checkboxMin:1},
+									error: 'please select at least one option',
+									valid: 'thanks you'
+								},	
+					selectField: {	
+									inputName: 'selectbox2',
+									rules: {selectHasValue: true,selectNull: '-please select-'},
+									error: 'please select one'
+								},						
+					fileData:	{
+									inputName: 'file2',
+									rules: {fileType: 'doc,txt,pdf'},
+									error: 'the file must be .doc, .txt or .pdf'
+								}
+				},
+				formClasses : { validClass : "help" }
+			});
+		});	
+	</script>
+</head>
+<div id="wrap" class="clear">
+	<!-- begin #header -->
+	<header id="header" class="clear">
+		<!-- navigation -->
+		<nav role="navigation">
+			<a href="index.html" id="logo"><img src="img/logo-small.png" alt="Pollenizer: Building & Investing In Great Web Businesses" role="banner"></a>
+			<ul role="menu" class="f-right">
+				<li role="menuitem"><a href="index.html">Home</a></li>
+				<li role="menuitem"><a href="markup.html">Markup</a></li>
+				<li role="menuitem"><a href="style.html">Style</a></li>
+				<li role="menuitem"><a href="javascript.html">Javascript</a></li>
+				<li role="menuitem"><a href="styleguide.html">Styleguide</a></li>			
+			</ul>
+		</nav>
+	</header><!-- end #header -->    
+    <!-- begin #page-->
+    <div id="page" class="clear">
+   		<div class="pageWrap">
+	 		<div id="content" role="main">
+	 	   		<div class="contentWrap">
+	 	   			
+	 	   			<section class="grid module rounded">
+ 	   					<div class="grid-8"> 
+	 	   					<header class="subhead">
+		 	   					<h2>Regular Form Validator <em>standard form</em></h2>		 	   				
+		 	   				</header>
+			    			<form action="" method="post" id="validatorForm1">
+			    				<fieldset>	 
+			    					<ul>
+			    						<li>
+			    							<label for="firstname1">first name</label>
+			    							<input type="text" size="20" id="firstname1" name="firstname1" class="textField required" placeholder="first name" />
+			    							<em class="error" title="firstname1"></em>
+			    						</li>
+			    						<li>
+			    							<label for="lastname1">last name</label>
+			    							<input type="text" size="20" id="lastname1" name="lastname1" class="textField required" placeholder="last name" />
+			    							<em class="error" title="lastname1"></em>
+			    						</li>
+			    						<li>
+			    							<label for="enquiry1">What is your enquiry?</label>
+			    							<textarea cols="18" rows="5" id="enquiry1" name="enquiry1" class="textareaField required"></textarea>
+			    							<em class="error" title="enquiry1"></em>
+			    						</li>
+			    						<li>
+			    							<label for="password1">password</label>
+			    							<input type="password" size="20" id="password1" name="password1" title="passwordField1" class="textField required" placeholder="enter password" />
+			    							<em class="error" title="password1"></em>
+			    						</li>
+			    						<li>
+			    							<label for="confirmpassword1">confirm password</label>
+			    							<input type="password" size="20" id="confirmpassword1" name="confirmpassword1" title="passwordField1" class="textField required" placeholder="confirm password" />
+			    							<em class="error" title="confirmpassword1"></em>
+			    						</li>			    									    									    									    						
+			    						<li>
+			    							<p class="fieldLabel">select an option:</p>
+			    							<div class="fieldBox">	
+			    								<span>		    								
+			         								<input type="radio" name="radio1" id="radio-choice-1a" value="choice-1a" class="radioField required" />
+			         								<label for="radio-choice-1a">10</label>
+			         							</span>
+			         							<span>
+			         								<input type="radio" name="radio1" id="radio-choice-1b" value="choice-1b" class="radioField required" />
+			         								<label for="radio-choice-1b">20</label>
+			         							</span>
+			         							<span>
+			         								<input type="radio" name="radio1" id="radio-choice-1c" value="choice-1c" class="radioField required" />
+			         								<label for="radio-choice-1c">30</label>
+			         							</span>
+			         							<span>
+			         								<input type="radio" name="radio1" id="radio-choice-1d" value="choice-1d" class="radioField required" />
+			         								<label for="radio-choice-1d">40</label>
+			         							</span>
+			         						</div>
+			         						<em class="error" title="radio1"></em>
+			    						</li>
+			    						<li> 
+			    							<p class="fieldLabel">checkbox label:</p>
+			    							<div class="fieldBox">   
+			    								<span>										    								
+			    									<input type="checkbox" name="checkbox1" id="checkbox1a" class="checkField required" />
+			    									<label for="checkbox1">check me</label>
+			    								</span>
+			    								<span>
+			    									<input type="checkbox" name="checkbox1" id="checkbox1b" class="checkField required" />
+			    									<label for="checkbox2">check me too!</label>
+			    								</span>
+			    							</div>
+			    							<em class="error" title="checkbox1"></em>
+			    						</li>
+			    						<li>
+			    							<label for="file1">file input label</label>
+			    							<input type="file" id="file1" name="file1" class="required" />
+			    							<em class="error" title="file1"></em>
+			    						</li>			    						
+			    						<li>
+			    							<label for="selectbox1">selectbox label:</label>
+			    							<select name="selectbox1" id="selectbox1" class="selectField required">
+			    								<option value="0">-please select-</option>
+			    								<option value="1">option 1</option>
+			    								<option value="2">option 2</option>
+			    								<option value="3">option 3</option>
+			    								<option value="4">option 4</option>
+			    								<option value="5">option 5</option>
+			    								<option value="6">option 6</option>
+			    							</select>
+			    							<em class="error" title="selectbox1"></em>
+			    						</li>
+			    						<li>
+			    							<input type="submit" value="Submit" class="submitField btn" />
+			    							<input type="reset" value="Reset" class="btn" />
+			    						</li>
+			    					</ul>
+			    				</fieldset>
+			    			</form>
+		    			</div>
+		    			
+		    			<div class="grid-4 last module">
+	 	   					<header class="subhead">
+		 	   					<h2>Stacked Validator <em>stacked form, class="form-stacked" on form element</em></h2>		 	   				
+		 	   				</header>
+			    			<form action="" method="post" id="validatorForm2" class="form-stacked">
+			    				<fieldset>	 
+			    					<ul>
+			    						<li>
+			    							<label for="firstname2">first name</label>
+			    							<input type="text" size="20" id="firstname2" name="firstname2" class="textField required" placeholder="first name" />
+			    							<em class="error" title="firstname2"></em>
+			    						</li>
+			    						<li>
+			    							<label for="lastname2">last name</label>
+			    							<input type="text" size="20" id="lastname2" name="lastname2" class="textField required" placeholder="last name" />
+			    							<em class="error" title="lastname2"></em>
+			    						</li>
+			    						<li>
+			    							<label for="enquiry2">What is your enquiry?</label>
+			    							<textarea cols="18" rows="5" id="enquiry2" name="enquiry2" class="textareaField required"></textarea>
+			    							<em class="error" title="enquiry2"></em>
+			    						</li>
+			    						<li>
+			    							<label for="password2">password</label>
+			    							<input type="password" size="20" id="password2" name="password2" title="passwordField2" class="textField required" placeholder="enter password" />
+			    							<em class="error" title="password2"></em>
+			    						</li>
+			    						<li>
+			    							<label for="confirmpassword2">confirm password</label>
+			    							<input type="password" size="20" id="confirmpassword2" name="confirmpassword2" title="passwordField2" class="textField required" placeholder="confirm password" />
+			    							<em class="error" title="confirmpassword2"></em>
+			    						</li>			    									    									    									    						
+			    						<li>
+			    							<p class="fieldLabel">select an option:</p>
+			    							<div class="fieldBox">	
+			    								<span>		    								
+			         								<input type="radio" name="radio2" id="radio-choice-2a" value="choice-2a" checked="checked" class="radioField required" />
+			         								<label for="radio-choice-1b">10</label>
+			         							</span>
+			         							<span>
+			         								<input type="radio" name="radio2" id="radio-choice-2b" value="choice-2b" class="radioField required" />
+			         								<label for="radio-choice-2b">20</label>
+			         							</span>
+			         							<span>
+			         								<input type="radio" name="radio2" id="radio-choice-2c" value="choice-2c" class="radioField required" />
+			         								<label for="radio-choice-3b">30</label>
+			         							</span>
+			         							<span>
+			         								<input type="radio" name="radio2" id="radio-choice-2d" value="choice-2d" class="radioField required" />
+			         								<label for="radio-choice-4b">40</label>
+			         							</span>
+			         						</div>
+			         						<em class="error" title="radio2"></em>
+			    						</li>
+			    						<li> 
+			    							<p class="fieldLabel">checkbox label:</p>
+			    							<div class="fieldBox">   
+			    								<span>										    								
+			    									<input type="checkbox" name="checkbox2" id="checkbox2" class="checkField required" />
+			    									<label for="checkbox2">check me</label>
+			    								</span>
+			    								<span>
+			    									<input type="checkbox" name="checkbox2" id="checkbox2" class="checkField required" />
+			    									<label for="checkbox2">check me too!</label>
+			    								</span>
+			    							</div>
+			    							<em class="error" title="checkbox2"></em>
+			    						</li>
+			    						<li>
+			    							<label for="file2">file input label</label>
+			    							<input type="file" id="file2" name="file2" class="required" />
+			    							<em class="error" title="file2"></em>
+			    						</li>			    						
+			    						<li>
+			    							<label for="selectbox2">selectbox label:</label>
+			    							<select name="selectbox2" id="selectbox2" class="selectField required">
+			    								<option value="0">-please select-</option>
+			    								<option value="1">option 1</option>
+			    								<option value="2">option 2</option>
+			    								<option value="3">option 3</option>
+			    								<option value="4">option 4</option>
+			    								<option value="5">option 5</option>
+			    								<option value="6">option 6</option>
+			    							</select>
+			    							<em class="error" title="selectbox2"></em>
+			    						</li>
+			    						<li>
+			    							<input type="submit" value="Submit" class="submitField btn" />
+			    							<input type="reset" value="Reset" class="btn" />
+			    						</li>
+			    					</ul>
+			    				</fieldset>
+			    			</form>
+		    			</div>
+		    		
+		    		</section> 
+		    			 	   				   				
+	 	   		</div><!-- end contentwrap -->  	
+			</div><!-- end #content -->
+		</div><!-- end pagewrap --> 
+    </div><!-- end page -->    	
+    <footer class="clear">
+ 		<div class="footerWrap"> 		   		
+    	</div><!-- end footerwrap --> 
+	</footer><!-- end of footer -->    	
+</div><!--! end of #wrap -->
+<!-- JavaScript at the bottom for fast page loading -->
+	<!-- plugin scripts-->
+	<script src="js/plugins/log.js"></script>
+	<script src="js/plugins/placeholder.js"></script>
+	<!-- custom interface -->
+	<script src="js/interface.js"></script>
+	<!--[if (lt IE 9) & (!IEMobile)]>
+	<script src="js/libs/selectivizr.js"></script>
+	<script src="js/libs/respond.js"></script>
+<![endif]-->
+<!-- end scripts-->
+</body>
+</html>
