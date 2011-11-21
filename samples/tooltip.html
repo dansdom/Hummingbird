@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Hummingbird: Tiiltip Plugin</title>
+	<meta name="description" content="">
+	<meta name="author" content="">	
+	<!--Microsoft. Delete if not required -->
+	<meta http-equiv="cleartype" content="on">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Icons -->
+	<link title="iPhone4" rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ios-114.png">
+	<link title="iPad" rel="apple-touch-icon-precomposed" sizes="72x72" href="../img/ios-72.png">
+	<link title="iPhone3" rel="apple-touch-icon-precomposed" href="../img/ios.png">
+	<link title="nokia" rel="shortcut icon" href="../img/ios.png">
+	<link title="Favicon" rel="shortcut icon" href="../favicon.ico">
+	<!--iOS. Delete if not required -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->	
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/style.css?v=1">
+	<link rel="stylesheet" href="../css/skin.css?v=1">
+	<!-- jQuery and HTML5 script so IE knows how to style the html5 elements -->
+	<script src="../js/libs/jquery.js"></script>	
+	<script src="../js/libs/html5.js"></script>	
+	
+<!-- ============== Plugin Specific Code  ======================================================================================== -->
+	<link rel="stylesheet" href="../css/plugins/tooltip.css?v=1">
+	<script src="../js/plugins/tooltip1.2.js"></script>	
+	<script>
+		$(document).ready(function()
+		{			
+			$(".gallery").tooltip({
+					domNode : true,
+					offsetY : -100,
+                    offsetX: 30
+				});	
+				
+			$(".staticTop").tooltip({
+					domNode : true,
+					offsetY : 0,
+                    offsetX: 0,
+                    staticTool : true,
+                    staticPos : 'top'
+				});	
+				
+			$(".staticBottom").tooltip({
+					domNode : true,
+					offsetY : 0,
+                    offsetX: 0,
+                    staticTool : true,
+                    staticPos : 'bottom'
+				});	
+				
+			$(".staticLeft").tooltip({
+					domNode : true,
+					offsetY : 0,
+                    offsetX: 0,
+                    staticTool : true,
+                    staticPos : 'left'
+				});	
+				
+			$(".staticRight").tooltip({
+					domNode : true,
+					offsetY : 0,
+                    offsetX: 0,
+                    staticTool : true,
+                    staticPos : 'right'
+				});								
+		});
+	</script>
+</head>
+<body>
+<div id="wrap" class="clear">
+	<!-- begin #header -->
+	<header id="header" class="clear">
+		<!-- navigation -->
+		<nav role="navigation">
+			<a href="index.html" id="logo"><img src="../img/logo-small.png" alt="Pollenizer: Building & Investing In Great Web Businesses" role="banner"></a>
+			<ul role="menu" class="f-right">
+				<li role="menuitem"><a href="../index.html">Home</a></li>
+				<li role="menuitem"><a href="../markup.html">Markup</a></li>
+				<li role="menuitem"><a href="../style.html">Style</a></li>
+				<li role="menuitem"><a href="../javascript.html">Javascript</a></li>
+				<li role="menuitem"><a href="../styleguide.html">Styleguide</a></li>			
+			</ul>
+		</nav>
+	</header><!-- end #header -->   
+    <!-- begin #page-->
+    <div id="page" class="clear">
+   		<div class="pageWrap">
+	 		<div id="content" role="main">
+	 	   		<div class="contentWrap">
+	 	   				
+ 	   				<section class="module rounded"> 
+	 	   					<header class="subhead">
+	 	   						<h2>Tooltip Demo <em>following the mouse with X and Y offsets set</em></h2>
+	 	   					</header>
+	 	   					<div class="galleryThumbs">
+		 	   					<ul class="clear">
+		 	   						<li>
+		 	   							<img src="img/weather/clouds1.jpg" width="120" height="80" alt="" class="gallery" title=".hero1" longdesc="" />
+		 	   							<div class="hero hero1">
+		 	   								<img src="img/weather/clouds1Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+	      	  				 	 	<li>
+		 	   							<img src="img/weather/clouds2.jpg" width="120" height="80" alt="" class="gallery" title=".hero2" longdesc="" />
+		 	   							<div class="hero hero2">
+		 	   								<img src="img/weather/clouds2Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   						<li>
+		 	   							<img src="img/weather/clouds3.jpg" width="120" height="80" alt="" class="gallery" title=".hero3" longdesc="" />
+		 	   							<div class="hero hero3">
+		 	   								<img src="img/weather/clouds3Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   						<li>
+		 	   							<img src="img/weather/clouds4.jpg" width="120" height="80" alt="" class="gallery" title=".hero4" longdesc="" />
+		 	   							<div class="hero hero4">
+		 	   								<img src="img/weather/clouds4Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   						<li>
+		 	   							<img src="img/weather/clouds5.jpg" width="120" height="80" alt="" class="gallery" title=".hero5" longdesc="" />
+		 	   							<div class="hero hero5">
+		 	   								<img src="img/weather/clouds5Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   						<li>
+		 	   							<img src="img/weather/clouds6.jpg" width="120" height="80" alt="" class="gallery" title=".hero6" longdesc="" />
+		 	   							<div class="hero hero6">
+		 	   								<img src="img/weather/clouds6Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   						<li>
+		 	   							<img src="img/weather/clouds7.jpg" width="120" height="80" alt="" class="gallery" title=".hero7" longdesc="" />
+		 	   							<div class="hero hero7">
+		 	   								<img src="img/weather/clouds7Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   						<li>
+		 	   							<img src="img/weather/clouds8.jpg" width="120" height="80" alt="" class="gallery" title=".hero8" longdesc="" />
+		 	   							<div class="hero hero8">
+		 	   								<img src="img/weather/clouds8Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   						<li>
+		 	   							<img src="img/weather/clouds9.jpg" width="120" height="80" alt="" class="gallery" title=".hero9" longdesc="" />
+		 	   							<div class="hero hero9">
+		 	   								<img src="img/weather/clouds9Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   						<li>
+		 	   							<img src="img/weather/clouds10.jpg" width="120" height="80" alt="" class="gallery" title=".hero10" longdesc="" />
+		 	   							<div class="hero hero10">
+		 	   								<img src="img/weather/clouds10Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   						<li>
+		 	   							<img src="img/weather/clouds11.jpg" width="120" height="80" alt="" class="gallery" title=".hero11" longdesc="" />
+		 	   							<div class="hero hero11">
+		 	   								<img src="img/weather/clouds11Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   						<li>
+		 	   							<img src="img/weather/clouds12.jpg" width="120" height="80" alt="" class="gallery" title=".hero12" longdesc="" />
+		 	   							<div class="hero hero12">
+		 	   								<img src="img/weather/clouds12Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   					</ul>
+	 	   					</div>  <!-- end of galleryThumbs -->
+	 	   				
+	 	   					<header class="subhead">
+	 	   						<h2>Tooltip Static Position Demo <em>statically positioned with 4 different classes (top,left,right and bottom)</em></h2>
+	 	   					</header>
+	 	   					<div class="galleryThumbs">
+		 	   					<ul class="clear">
+		 	   						<li>
+		 	   							<img src="img/weather/clouds1.jpg" width="120" height="80" alt="" class="staticTop" title=".static1" longdesc="" />
+		 	   							<div class="hero static1">
+		 	   								<img src="img/weather/clouds1Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+	      	  				 	 	<li>
+		 	   							<img src="img/weather/clouds2.jpg" width="120" height="80" alt="" class="staticBottom" title=".static2" longdesc="" />
+		 	   							<div class="hero static2">
+		 	   								<img src="img/weather/clouds2Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   						<li>
+		 	   							<img src="img/weather/clouds3.jpg" width="120" height="80" alt="" class="staticLeft" title=".static3" longdesc="" />
+		 	   							<div class="hero static3">
+		 	   								<img src="img/weather/clouds3Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   						<li>
+		 	   							<img src="img/weather/clouds4.jpg" width="120" height="80" alt="" class="staticRight" title=".static4" longdesc="" />
+		 	   							<div class="hero static4">
+		 	   								<img src="img/weather/clouds4Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   						<li>
+		 	   							<img src="img/weather/clouds5.jpg" width="120" height="80" alt="" class="staticTop" title=".static5" longdesc="" />
+		 	   							<div class="hero static5">
+		 	   								<img src="img/weather/clouds5Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   						<li>
+		 	   							<img src="img/weather/clouds6.jpg" width="120" height="80" alt="" class="staticBottom" title=".static6" longdesc="" />
+		 	   							<div class="hero static6">
+		 	   								<img src="img/weather/clouds6Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   						<li>
+		 	   							<img src="img/weather/clouds7.jpg" width="120" height="80" alt="" class="staticLeft" title=".static7" longdesc="" />
+		 	   							<div class="hero static7">
+		 	   								<img src="img/weather/clouds7Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   						<li>
+		 	   							<img src="img/weather/clouds8.jpg" width="120" height="80" alt="" class="staticRight" title=".static8" longdesc="" />
+		 	   							<div class="hero static8">
+		 	   								<img src="img/weather/clouds8Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   						<li>
+		 	   							<img src="img/weather/clouds9.jpg" width="120" height="80" alt="" class="staticTop" title=".static9" longdesc="" />
+		 	   							<div class="hero static9">
+		 	   								<img src="img/weather/clouds9Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   						<li>
+		 	   							<img src="img/weather/clouds10.jpg" width="120" height="80" alt="" class="staticBottom" title=".static10" longdesc="" />
+		 	   							<div class="hero static10">
+		 	   								<img src="img/weather/clouds10Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   						<li>
+		 	   							<img src="img/weather/clouds11.jpg" width="120" height="80" alt="" class="staticLeft" title=".static11" longdesc="" />
+		 	   							<div class="hero static11">
+		 	   								<img src="img/weather/clouds11Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   						<li>
+		 	   							<img src="img/weather/clouds12.jpg" width="120" height="80" alt="" class="staticRight" title=".static12" longdesc="" />
+		 	   							<div class="hero static12">
+		 	   								<img src="img/weather/clouds12Hero.jpg" width="300" height="200" />
+		 	   							</div>
+		 	   						</li>
+		 	   					</ul>
+	 	   					</div><!-- end of galleryThumbs -->
+	 	   						   					
+	 	   				</section><!-- end of section -->		 	   					 	   				 					 	   					
+	 	   					
+	 	   			</div><!-- end contentwrap -->  	
+			</div><!-- end #content -->
+		</div><!-- end pagewrap --> 
+    </div><!-- end page -->    	
+    <footer class="clear">
+ 		<div class="footerWrap"> 		   		
+    	</div><!-- end footerwrap --> 
+	</footer><!-- end of footer -->    	
+</div><!--! end of #wrap -->
+<!-- JavaScript at the bottom for fast page loading -->
+	<!-- plugin scripts-->
+	<script src="../js/plugins/log.js"></script>
+	<script src="../js/plugins/placeholder.js"></script>
+	<!-- custom interface -->
+	<script src="../js/interface.js"></script>
+	<!--[if (lt IE 9) & (!IEMobile)]>
+	<script src="../js/libs/selectivizr.js"></script>
+	<script src="../js/libs/respond.js"></script>
+<![endif]-->
+<!-- end scripts-->
+</body>
+</html>
