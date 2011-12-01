@@ -62,7 +62,8 @@ a:hover,a:active {color:#222}
 
 /* ICONS  
  * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-.websymbols {font-family:websymbols;font-size:20px} 
+.websymbols {font-family:websymbols;font-size:20px}
+.websymbols-large {font-family:websymbols;font-size:80px} 
 .twitter,.facebook,.email {background:transparent url(img/sprite.png) no-repeat 0 0;padding:5px 5px 5px 25px;line-height:2}
 .twitter {background-position:0 0} 			.twitter:hover {background-position:0 -100px} 
 .facebook {background-position:0 -200px}	.facebook:hover {background-position:0 -300px}
