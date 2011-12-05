@@ -21,7 +21,8 @@
         settings = container.data("settings") || defaultSettings, // If this has been called once before, use the old settings as the default
         existingSettings = container.data('settings'),
         rootElement = ("onorientationchange" in window) ? $(document) : $(window), // hack to acccount for iOS position:fixed shortcomings
-        imgRatio, bgImg, bgWidth, bgHeight, bgOffset, bgCSS;
+        imgRatio, bgImg, bgWidth, bgHeight, bgOffset, bgCSS,
+        mesh = "<div id='mesh'></div>";
                 
         // Extend the settings with those the user has provided
         if(options && typeof options == "object") $.extend(settings, options);
@@ -73,6 +74,7 @@
                  
                 // Append the container to the body, if it's not already there
                 if($("body #backstretch").length == 0) {
+                	container.append(mesh).css({left: 0, top: 0, position: "fixed", overflow: "hidden", zIndex: -999999, margin: 0, padding: 0, height: "100%", width: "100%"});
                     $("body").append(container);
                 }
                 
@@ -103,7 +105,7 @@
                     if(settings.centeredX) $.extend(bgCSS, {left: "-" + bgOffset + "px"});
                 }
 
-                $("#backstretch, #backstretch img:not(.deleteable)").width( bgWidth ).height( bgHeight )
+                $("#backstretch, #backstretch img:not(.deleteable), #mesh").width( bgWidth ).height( bgHeight )
                                                    .filter("img").css(bgCSS);
             } catch(err) {
                 // IE7 seems to trigger _adjustBG before the image is loaded.

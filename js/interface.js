@@ -9,7 +9,23 @@ Project = {
 	},
 	backgroundStretch : function()
 	{
-		$.backstretch("img/landing.jpg");
+		var img1 = "img/landing1.jpg",
+			img2 = "img/landing2.jpg",
+			img3 = "img/landing3.jpg";
+			
+		if ($("body").hasClass("landing-1"))
+		{
+			$.backstretch("img/landing1.jpg");
+		}
+		if ($("body").hasClass("landing-2"))
+		{
+			$.backstretch("img/landing2.jpg");
+		}
+		if ($("body").hasClass("landing-3"))
+		{
+			$.backstretch("img/landing3.jpg");
+		}
+		
 	},
 	validateLanding : function()
 	{
