@@ -86,6 +86,9 @@ a:hover,a:active {color:#222}
 .close {color:#222;float:right;font-size:26px;font-weight:bold;line-height:13px;text-shadow:0 1px 0 rgba(255,255,255,0.5)}
 .close:hover {color:#000;text-shadow:0 1px 0 rgba(255,255,255,0.85)}
 
+/*  LANDING PAGE  */
+.landing {}
+
 /* FOOTER
  * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 #footer {padding:15px 0 0 0}

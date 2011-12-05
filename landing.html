@@ -28,7 +28,7 @@
 	<script src="js/libs/jquery.js"></script>	
 	<script src="js/libs/html5.js"></script>		
 </head>
-<body class="homepage">		
+<body class="landing">		
 <div id="wrap" class="clear">
 	<!-- begin #header -->
 	<header id="header" class="clear">
@@ -59,18 +59,19 @@
 	 	   					Lorem ipsum dolor sit amet vestibulum hendrerit cursus erat, a tincidunt ipsum malesuada at. Nam id dapibus. Lorem ipsum dolor sit amet vestibulum hendrerit cursus erat, a tincidunt ipsum malesuada at. Nam id dapibus.
 	 	   					</h3>
 						</header>	 	   				
-	 	   				<form action="#">
+	 	   				<form action="#" id="landingForm">
    							<fieldset>
 				          		<legend>Signup now</legend>
 				          		<ul>
 				          		<li>
-				          			<label for="name">Name</label>
-				              		<input type="text" size="20" name="name" id="name">
+				          			<label for="username">Name</label>
+				              		<input type="text" size="20" name="username" id="username" class="required">
+				              		<em class="error" title="username"></em>
 								</li>
-								<li class="error">
+								<li>
 									<label for="email">Email</label>
-									<input type="email" size="20" name="email" id="email">
-									<em class="error">Not a valid email</em>
+									<input type="email" size="20" name="email" id="email" class="required">
+									<em class="error" title="email"></em>
 								</li>
 								<li class="t-center">
 						          	<input type="submit" value="Yes! Im interested" class="btn rounded">
@@ -93,6 +94,8 @@
 	<!-- plugin scripts-->
 	<script src="js/plugins/log.js"></script>
 	<script src="js/plugins/placeholder.js"></script>
+	<script src="js/plugins/validator1.4a.js"></script>
+	<script src="js/plugins/jquery.backstretch.js"></script>
 	<!-- custom interface -->
 	<script src="js/interface.js"></script>
 	<!--[if (lt IE 9) & (!IEMobile)]>
