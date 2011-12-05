@@ -152,6 +152,7 @@ nav li {display:inline-block;width:auto}
 .f-right {float:right}
 .f-left {float:left}
 .f-center {float:none;margin:0 auto}
+.reset {margin:0;padding:0}
 .ir {display:block;overflow:hidden;background-repeat:no-repeat;text-align:left;text-indent:-9000em;direction:ltr}
 /*  List styles  */
 ul.list {padding:0}
