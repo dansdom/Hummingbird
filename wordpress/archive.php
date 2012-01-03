@@ -24,7 +24,10 @@ get_header(); ?>
 	if ( have_posts() )
 		the_post();
 ?>
-
+<section class="rounded" role="region">
+	<div class="grid">
+		<article class="grid-9">
+		<header class="subhead">
 			<h1>
 <?php if ( is_day() ) : ?>
 				<?php printf( __( 'Daily Archives: %s', 'twentyten' ), get_the_date() ); ?>
@@ -36,6 +39,7 @@ get_header(); ?>
 				<?php _e( 'Blog Archives', 'twentyten' ); ?>
 <?php endif; ?>
 			</h1>
+		</header>
 
 <?php
 	/* Since we called the_post() above, we need to
@@ -50,6 +54,8 @@ get_header(); ?>
 	 */
 	 get_template_part( 'loop', 'archive' );
 ?>
-
-<?php get_sidebar(); ?>
+</article>
+		<?php get_sidebar(); ?>
+	</div>
+</section>
 <?php get_footer(); ?>

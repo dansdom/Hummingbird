@@ -10,7 +10,12 @@
 get_header(); ?>
 
 <?php if ( have_posts() ) : ?>
+<section class="rounded" role="region">
+	<div class="grid">
+		<article class="grid-9">
+			<header class="subhead">
 				<h1><?php printf( __( 'Search Results for: %s', 'twentyten' ), '' . get_search_query() . '' ); ?></h1>
+			</header>	
 				<?php
 				/* Run the loop for the search to output the results.
 				 * If you want to overload this in a child theme then include a file
@@ -23,6 +28,8 @@ get_header(); ?>
 					<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'twentyten' ); ?></p>
 					<?php get_search_form(); ?>
 <?php endif; ?>
-
-<?php get_sidebar(); ?>
+</article>
+		<?php get_sidebar(); ?>
+	</div>
+</section>
 <?php get_footer(); ?>

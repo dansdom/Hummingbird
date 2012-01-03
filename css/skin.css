@@ -10,6 +10,7 @@
  * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 @import url(http://fonts.googleapis.com/css?family=Homemade+Apple);
 @font-face{font-family:'websymbols';src:url('fonts/websymbols.eot');src:url('fonts/websymbols.eot?#iefix') format('embedded-opentype'),url('fonts/websymbols.woff') format('woff'),url('fonts/websymbols.ttf') format('truetype'),url('fonts/websymbols.svg#websymbols') format('svg')}
+@font-face{font-family:'iconic';src:url('fonts/iconic.eot');src:url('fonts/iconic.eot?#iefix') format('embedded-opentype'),url('fonts/iconic.woff') format('woff'),url('fonts/iconic.ttf') format('truetype'),url('fonts/iconic.svg#iconic') format('svg')}
 
 /* DEFAULT  
  * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -19,6 +20,7 @@ blockquote p {font:normal 2em/1.2 'Homemade Apple',Georgia}
 h1,h2,h3,h4,h5,h6 {font-weight:bold;letter-spacing:-0.03em}
 a {color:#1b75bb;text-decoration:none}
 a:hover,a:active {color:#222}
+a:link {-webkit-tap-highlight-color:#1b75bb} 
 ::-moz-selection {background:#1b75bb}
 ::selection {background:#1b75bb}
 
@@ -43,6 +45,7 @@ a:hover,a:active {color:#222}
 .innerDark {-webkit-box-shadow:inset 0 1px 0 rgba(0,0,0,0.25);-moz-box-shadow:inset 0 1px 0 rgba(0,0,0,0.25);box-shadow:inset 0 1px 0 rgba(0,0,0,0.25)}
 .textDark {text-shadow:0 1px 0 rgba(0,0,0,0.75)}
 .textLight {text-shadow:0 1px 0 rgba(255,255,255,0.75)}
+.kern {letter-spacing:-0.03em}
 /*  Headings  */
 .subhead {border-bottom:3px solid #ccc;line-height:1;margin:0 0 15px 0}
 /* Messages */
@@ -64,7 +67,9 @@ a:hover,a:active {color:#222}
 /* ICONS  
  * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .websymbols {font-family:websymbols;font-size:20px}
-.websymbols-large {font-family:websymbols;font-size:80px} 
+.websymbols-large {font-family:websymbols;font-size:80px}
+.iconic {font-family:iconic;font-size:30px}
+.iconic-large {font-family:iconic;font-size:80px}
 .twitter,.facebook,.email {background:transparent url(img/sprite.png) no-repeat 0 0;padding:5px 5px 5px 25px;line-height:2}
 .twitter {background-position:0 0} 			.twitter:hover {background-position:0 -100px} 
 .facebook {background-position:0 -200px}	.facebook:hover {background-position:0 -300px}

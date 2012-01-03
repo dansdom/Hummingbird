@@ -8,7 +8,10 @@
  */
 
 get_header(); ?>
-
+<section class="rounded" role="region">
+	<div class="grid">
+		<article class="grid-9">
+			<header class="subhead">
 <?php
 	/* Queue the first post, that way we know who
 	 * the author is when we try to get their name,
@@ -22,7 +25,7 @@ get_header(); ?>
 ?>
 
 				<h1><?php printf( __( 'Author Archives: %s', 'twentyten' ), "<a class='url fn n' href='" . get_author_posts_url( get_the_author_meta( 'ID' ) ) . "' title='" . esc_attr( get_the_author() ) . "' rel='me'>" . get_the_author() . "</a>" ); ?></h1>
-
+</header>
 <?php
 // If a user has filled out their description, show a bio on their entries.
 if ( get_the_author_meta( 'description' ) ) : ?>
@@ -46,6 +49,8 @@ if ( get_the_author_meta( 'description' ) ) : ?>
 	 */
 	 get_template_part( 'loop', 'author' );
 ?>
-
-<?php get_sidebar(); ?>
+</article>
+		<?php get_sidebar(); ?>
+	</div>
+</section>
 <?php get_footer(); ?>

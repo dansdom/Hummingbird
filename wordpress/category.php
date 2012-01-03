@@ -8,10 +8,14 @@
  */
 
 get_header(); ?>
-
+<section class="rounded" role="region">
+	<div class="grid">
+		<article class="grid-9">
+			<header class="subhead">
 				<h1><?php
 					printf( __( 'Category Archives: %s', 'twentyten' ), '' . single_cat_title( '', false ) . '' );
 				?></h1>
+			</header>
 				<?php
 					$category_description = category_description();
 					if ( ! empty( $category_description ) )
@@ -23,6 +27,8 @@ get_header(); ?>
 				 */
 				get_template_part( 'loop', 'category' );
 				?>
-
-<?php get_sidebar(); ?>
+</article>
+		<?php get_sidebar(); ?>
+	</div>
+</section>
 <?php get_footer(); ?>
