@@ -4,8 +4,15 @@
 Project = {
 	init : function()
 	{
-		this.backgroundStretch();
-		this.validateLanding();
+		if ($.backstretch)
+		{
+			this.backgroundStretch();
+		}
+		
+		if ($("#landingForm").length > 0)
+		{
+			this.validateLanding();
+		}
 	},
 	backgroundStretch : function()
 	{
