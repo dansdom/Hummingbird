@@ -58,15 +58,6 @@
 (function ($) {
 	// this ones for you 'uncle' Doug!
 	'use strict';
-	// just a logging function to output logging without danger of breaking the script
-	var consoleLog = function(msg)
-	{
-		// turn this off for production code
-		var debugMode = true;
-		if (console && console.log && debugMode === true) {
-			console.log(msg);
-		}
-	};
 	
 	// Plugin namespace definition
 	$.Popup = function (options, element, callback)
@@ -133,34 +124,7 @@
 			
 			$(this.el).bind('click.' + this.namespace, function()
 			{
-				
-				popup.el.galleryTitle = $(this).attr("title");
-				popup.el.imageDesc = $(this).attr("longdesc");
-				
-                // *** create the markup for popup box ***
-                popup.createBox();
-				
-                // *** find the screen dimensions ***
-                var dimensions = popup.findScreenPos();
-                popup.el.winY = dimensions.winY;
-                popup.el.winX = dimensions.winX;
-				popup.el.scrY = dimensions.scrY;
-                popup.el.scrX = dimensions.scrX;
-				
-                // *** either display content as an image OR as a DOM node ***
-                if (popup.isContentImage())
-                {
-                    // find the index of this image in the gallery
-                    popup.displayImage();
-                }
-                else if (popup.opts.ajax === true)
-                {
-                   	popup.getAjaxContent();	
-                }
-                else
-                {                   		
-                    popup.styleNodeBox();
-                }
+				popup.openBox();
                 return false;
             });
 			
@@ -523,14 +487,15 @@
 			// add key controls and keep escape key handler
 			$(document).bind('keydown.' + this.namespace, function(e)
 			{
+				console.log("keydown");
 				if (e.keyCode == 39)
 				{
-					$(document).unbind('.' + popup.namespace);
+					//$(document).unbind('.' + popup.namespace);
 					popup.cycleImage(1);
 				}
 				else if (e.keyCode == 37)
 				{
-					$(document).unbind("." + popup.namespace);
+					//$(document).unbind("." + popup.namespace);
 					popup.cycleImage(-1);
 				}
 				if (e.keyCode == 27)
@@ -551,6 +516,37 @@
 				return false;
 			});
 		},
+		// opens the popup box
+		openBox : function()
+		{
+			this.el.galleryTitle = $(this.el).attr("title");
+			this.el.imageDesc = $(this.el).attr("longdesc");
+				
+            // *** create the markup for popup box ***
+            this.createBox();
+			
+            // *** find the screen dimensions ***
+            var dimensions = this.findScreenPos();
+            this.el.winY = dimensions.winY;
+            this.el.winX = dimensions.winX;
+			this.el.scrY = dimensions.scrY;
+            this.el.scrX = dimensions.scrX;
+			
+            // *** either display content as an image OR as a DOM node ***
+            if (this.isContentImage())
+            {
+                // find the index of this image in the gallery
+                this.displayImage();
+            }
+            else if (this.opts.ajax === true)
+            {
+                this.getAjaxContent();	
+            }
+            else
+            {                   		
+                this.styleNodeBox();
+            }
+		},
 		// this function closes the box and removes it from the DOM.
 		closeBox : function()
 		{
@@ -563,6 +559,7 @@
 		// this function finds the next image and then displays it
 		cycleImage : function(imgIndex)
 		{
+			console.log("hitting cycle image");
 			var thisIndex = $("*[title='" + this.el.galleryTitle + "']").index(this.el),
 				galleryLength = $("*[title='" + this.el.galleryTitle + "']").length,
 				cycleIndex = thisIndex + imgIndex;
@@ -575,6 +572,7 @@
 			{
 				cycleIndex = 0;
 			}
+			console.log("*[title='" + this.el.galleryTitle + "']");
 			// open the new popup by simulating a click function on the thumbnail
 			// !!!!!!!!!!! this needs to change, I can do this better now with the new architecture !!!!!!!!!!!!!!
 			$("*[title='" + this.el.galleryTitle + "']:eq(" + cycleIndex + ")").click();
@@ -582,8 +580,11 @@
 		option : function(args) {
 			this.opts = $.extend(true, {}, this.opts, args);
 		},
+		// want to change the content of the box? no worries
+		changeContent : function(content) {			
+			this.el.fragment = $(content);
+		},
 		destroy : function() {
-			consoleLog("unbinding namespaced events");
 			this.el.unbind("." + this.namespace);
 		}
 	};
@@ -606,12 +607,12 @@
 				
 				// if there is no data for this instance of the plugin, then the plugin needs to be initialised first, so just call an error
 				if (!pluginInstance) {
-					consoleLog("The plugin has not been initialised yet when you tried to call this method: " + options);
+					alert("The plugin has not been initialised yet when you tried to call this method: " + options);
 					return;
 				}
 				// if there is no method defined for the option being called, or it's a private function (but I may not use this) then return an error.
 				if (!$.isFunction(pluginInstance[options]) || options.charAt(0) === "_") {
-					consoleLog("the plugin contains no such method: " + options);
+					alert("the plugin contains no such method: " + options);
 					return;
 				}
 				// apply the method that has been called
