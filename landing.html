@@ -26,7 +26,10 @@
 	<link rel="stylesheet" href="css/skin.css?v=1">
 	<!-- jQuery and HTML5 script so IE knows how to style the html5 elements -->
 	<script src="js/libs/jquery.js"></script>	
-	<script src="js/libs/html5.js"></script>		
+	<script src="js/libs/html5.js"></script>
+	<!--[if (lt IE 9) & (!IEMobile)]>
+		<script src="js/libs/selectivizr.js"></script>
+	<![endif]-->
 </head>
 <body class="landing-1">		
 <div id="wrap" class="clear">
@@ -98,10 +101,6 @@
 	<script src="js/plugins/jquery.backstretch.js"></script>
 	<!-- custom interface -->
 	<script src="js/interface.js"></script>
-	<!--[if (lt IE 9) & (!IEMobile)]>
-	<script src="js/libs/selectivizr.js"></script>
-	<script src="js/libs/respond.js"></script>
-<![endif]-->
 <!-- end scripts-->
 </body>
 </html>
