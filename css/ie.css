@@ -1,4 +1,4 @@
-#wrap,footer {width:expression(document.body.clientWidth < 982? "980px" : document.body.clientWidth > 1182? "1180px" : "auto")}
-.ie6 input {vertical-align:text-bottom}
-.ie6 html {filter:expression(document.execCommand("BackgroundImageCache", false, true))}
-.ie7 img {-ms-interpolation-mode:bicubic}
+#content {width:expression(document.body.clientWidth < 982? "980px":document.body.clientWidth > 1157? "1155px":"auto")}
+input {*vertical-align:text-bottom}
+html {*filter:expression(document.execCommand("BackgroundImageCache", false, true))}
+img {*-ms-interpolation-mode:bicubic}
