@@ -17,7 +17,7 @@ html {background:#eee;color:#222}
 body {background:none}
 blockquote p {font:normal 2em/1.2 'Homemade Apple',Georgia}
 h1,h2,h3,h4,h5,h6 {font-weight:bold;letter-spacing:-0.03em}
-a {color:#1b75bb;text-decoration:none}
+a {color:#1b75bb;text-decoration:none;-webkit-transition: all 0.1s ease;-moz-transition: all 0.1s ease;-o-transition: all 0.1s ease;transition: all 0.1s ease}
 a:hover {color:#222}
 a:link {-webkit-tap-highlight-color:#1b75bb}
 ::-moz-selection {background:#1b75bb}
@@ -44,7 +44,7 @@ a:link {-webkit-tap-highlight-color:#1b75bb}
 #header h5 a {background:transparent url(img/logo.png) no-repeat 0 0;height:70px;width:300px}
 #header nav ul {float:right;margin:10px 10px 0 0}
 #header nav li a {display:inline-block;padding:0 5px;color:#bbb;font-size:1.3em;text-shadow:0 1px 0 rgba(255,255,255,0.75)}
-#header nav li a:hover {color:#222}
+#header nav li a:hover,#header nav li.active a {color:#222}
 /*  Headings  */
 .title {border-bottom:3px solid #ddd;line-height:1;margin:0 0 15px 0;padding:0 0 10px 0}
 .subtitle {line-height:1;margin:0 0 10px 0;padding:0 0 7px 0}

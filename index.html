@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
 	<meta charset="utf-8">
 	<title>Hummingbird: Styleguide</title>
 	<meta name="description" content="">
 	<meta name="author" content="">	
+	<!-- OpenGraph for Facebook -->
+	<meta property="og:title" content="Hummingbird">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://pollenizer.com">
+	<meta property="og:image" content="http://pollenizer.com/">
+	<meta property="og:site_name" content="Hummingbird">
+	<meta property="og:fb:admins" content="USER_ID">
+	<meta property="og:description" content="Enter a description that will attract Facebook users. Use no more than 255 characters.">
+	<meta property="og:street-address" content="Street Address">
+	<meta property="og:locality" content="Locality">
+	<meta property="og:region" content="Region">
+	<meta property="og:postal-code" content="Postal Code">
+	<meta property="og:country-name" content="Australia">
 	<!--Microsoft. Delete if not required -->
 	<meta http-equiv="cleartype" content="on">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -13,12 +26,11 @@
 	<link title="iPad" rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ios-72.png">
 	<link title="iPhone3" rel="apple-touch-icon-precomposed" href="img/ios.png">
 	<link title="nokia" rel="shortcut icon" href="img/ios.png">
-	<link title="Favicon" rel="shortcut icon" href="/favicon.ico">
+	<link title="Favicon" rel="shortcut icon" href="favicon.ico">
 	<!--iOS. Delete if not required -->
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<link rel="apple-touch-startup-image" href="img/splash.png">
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="apple-touch-icon" href="img/ios.png">
 	<!-- Mobile viewport optimized: j.mp/bplateviewport -->	
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<!-- CSS -->
@@ -29,103 +41,594 @@
 	<script src="js/libs/html5.js"></script>
 	<!--[if (lt IE 9) & (!IEMobile)]>
 		<script src="js/libs/selectivizr.js"></script>
-	<![endif]-->
+	<![endif]-->	
+	<!-- For samples only - REMOVE -->
+	<style type="text/css">
+	.view {background:#222;padding:5px 0;text-align:center;color:#999;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}
+	</style>
 </head>
-<body class="homepage">		
-<div id="wrap" class="clear">
+<body>	
+<div id="wrap">
 	<!-- begin #header -->
-	<header id="header" class="clear">
+	<div id="header">
 		<!-- navigation -->
-		<nav role="navigation">
+		<nav role="navigation">	
 			<ul role="menu" class="f-right">
 				<li role="menuitem"><a href="index.html">Home</a></li>
-				<li role="menuitem"><a href="markup.html">Markup</a></li>
-				<li role="menuitem"><a href="style.html">Style</a></li>
-				<li role="menuitem"><a href="javascript.html">Javascript</a></li>
-				<li role="menuitem"><a href="styleguide.html">Styleguide</a></li>
+				<li role="menuitem"><a href="template.html">Template</a></li>
+				<li role="menuitem"><a href="samples/template-welcome.html">Welcome</a></li>
+				<li role="menuitem"><a href="samples/template-about.html">About</a></li>
+				<li role="menuitem"><a href="samples/template-blog.html">Blog</a></li>	
+				<li role="menuitem"><a href="samples/template-article.html">Article</a></li>	
+				<li role="menuitem"><a href="samples/template-newsletter.html">Newsletter</a></li>					
 			</ul>
+			<h5><a href="index.html" class="ir" id="logo">Pollenizer</a></h5>
 		</nav>
-		<div class="headerWrap">
-			<h1><a href="#"><img src="img/logo.png" alt="Pollenizer" role="banner"></a></h1>    			
-		</div>
-	</header><!-- end #header -->    
-    <!-- begin #page-->
-    <div id="page" class="clear">
-   		<div class="pageWrap">
-	 		<div id="content" role="main">
-	 	   		<div class="contentWrap">
-
-<!-- ============== HOME  ======================================================================================== -->	
- 	   					   				
- 	   					<hgroup class="t-center f-center grid-10 textLight">
- 	   					<h3>Hummingbird contains three component types. First the HTML, second the CSS and finally the Javascript. A more detailed description can be found in the 'more info' links.</h1>
- 	   					<h3>This framework aims to give clear separation of code. CSS and Javascript should not be located in the HTML. The goal of the framework is to have as much ready made code as possible. For instance the user needs only to modify skin.css to apply a style to a website. also, interface.js is the only javascript that a developer needs to modify.</h2>
- 	   					</hgroup>
+	</div><!-- end #header -->  
+    <!-- begin #content -->
+    <div id="content">
+    	<div class="page" role="main">	 	   		
+	 	   		
+<!-- ============== TYPOGRAPHY  ======================================================================================== -->	
+ 	   				<section title="General Typography" role="region" class="rounded">
+ 	   					<header class="title">
+	 	   					<h2>General Typograpphy</h2>	 	   					
+	 	   				</header>		   				
+	 	   				<div class="grid" title="Typography: Basic headings, paragraphs and blockquotes">
+	 	   					<div class="grid-3">
+	 	   						<!-- headings -->
+	 	   						<h4>Headings</h4>
+	 	   						<h2>header (h1)</h2>
+		 	   					<h3>header (h2)</h3>
+		 	   					<h4>header (h3)</h4>
+		 	   					<h5>header (h4)</h5>
+		 	   					<h6><a href="#">header (h5)</a></h6>		 	   					
+	 	   					</div>
+	 	   					<div class="grid-3">
+	 	   						<!-- paragraph -->
+	 	   						<h4>Paragraph</h4>
+	 	   						<p>Lorem ipsum dolor sit amet, <em>consectetur</em> <b>adipiscing</b>. Vestibulum hendrerit cursus erat, a tincidunt ipsum malesuada at. Nam id dapibus.</p>
+	 	   						<p>Nam id dapibus eros. Duis vel sem ut mauris tincidunt consectetur. Nunc eu diam quis arcu vulputate pellentesque vehicula a dolor. Vestibulum hendrerit cursus.</p>
+	 	   					</div>
+	 	   					<div class="grid-6 last">	
+	 	   						<!-- blockquotes -->	 
+	 	   						<h4>Blockquote</h4>	   					
+	 	   						<blockquote>
+	 	   							<p>Lorem ipsum dolor sit amet, <em>consectetur</em> <b>adipiscing</b>. Vestibulum hendrerit cursus erat, a tincidunt ipsum malesuada at. Nam id dapibus.</p>
+	 	   							<small>Embeded webfont</small>		 	   							
+	 	   						</blockquote>
+	 	   					</div>		 	   					
+	 	   				</div> 	   				
+	 	   				<div class="grid" title="Typography: Lists">
+	 	   					<div class="grid-2">
+	 	   						<!-- ordered list -->
+	 	   						<h4>Ordered List</h4>
+	 	   						<ol>
+		 	   						<li>Item 1</li>
+		 	   						<li>Item 2</li>
+		 	   						<li>Item 3</li>
+		 	   						<li>Item 4</li>
+		 	   						<li>Item 5</li>  
+		 	   					</ol>
+	 	   					</div>
+	 	   					<div class="grid-2">
+	 	   						<!-- unordered list -->
+	 	   						<h4>Unordered List</h4>
+	 	   						<ul>
+		 	   						<li>Item 1</li>
+		 	   						<li>Item 2</li>
+		 	   						<li>Item 3</li>
+		 	   						<li>Item 4</li>
+		 	   						<li>Item 5</li>  
+		 	   					</ul>
+		 	   				</div>
+		 	   				<div class="grid-2">
+	 	   						<!-- unordered list -->
+	 	   						<h4>Styled List</h4>
+	 	   						<ul class="list">
+		 	   						<li>Item 1</li>
+		 	   						<li>Item 2</li>
+		 	   						<li>Item 3</li>
+		 	   						<li>Item 4</li>
+		 	   						<li>Item 5</li>  
+		 	   					</ul>
+		 	   				</div>
+		 	   				<div class="grid-6 last">
+	 	   						<!-- unordered list -->
+	 	   						<h4>Description List</h4>
+	 	   						<dl>
+		 	   						<dt>Description Term</dt>
+		 	   						<dd>Description lorem ipsum dolor sit amet, consectetur adipiscing elit.</dd>
+		 	   						<dt>Description Term</dt>
+		 	   						<dd>Vestibulum hendrerit cursus erat</dd>			 	   						
+		 	   					</dl>
+		 	   				</div>		 	   						 	   					
+	 	   				</div>
+	 	   				<div class="grid">
+	 	   					<div class="grid-6">
+	 	   						<!-- basic table -->
+	 	   						<h4>Basic Table</h4>
+			 	   				<table>
+			 	   					<thead>
+			 	   						<tr>
+			 	   							<th>Lorem ipsum dolor</th>
+			 	   							<th>Lorem ipsum dolor sit amet, consectetur adipiscing</th>
+			 	   						</tr>
+			 	   					</thead>
+			 	   					<tbody>
+			 	   						<tr>
+			 	   							<th>Lorem ipsum dolor</th>
+			 	   							<td>Lorem ipsum dolor sit amet, <em>consectetur</em> <b>adipiscing</b></td>
+			 	   						</tr>
+			 	   						<tr>
+			 	   							<th>Lorem ipsum dolor</th>
+			 	   							<td>Lorem ipsum dolor sit amet, <em>consectetur</em> <b>adipiscing</b></td>
+			 	   						</tr>
+			 	   						<tr>
+			 	   							<th>Lorem ipsum dolor</th>
+			 	   							<td>Lorem ipsum dolor sit amet, <em>consectetur</em> <b>adipiscing</b></td>
+			 	   						</tr>
+			 	   						<tr>
+			 	   							<th>Lorem ipsum dolor</th>
+			 	   							<td>Lorem ipsum dolor sit amet, <em>consectetur</em> <b>adipiscing</b></td>
+			 	   						</tr>
+			 	   						<tr>
+			 	   							<th>Lorem ipsum dolor</th>
+			 	   							<td>Lorem ipsum dolor sit amet, <em>consectetur</em> <b>adipiscing</b></td>
+			 	   						</tr>				 	   						
+			 	   					</tbody>
+			 	   				</table>		 	   					
+	 	   					</div>
+	 	   					<div class="grid-6 last">
+	 	   						<!-- basic table -->
+	 	   						<h4>Styled Table</h4>
+	 	   						<div class="tabular">
+	 	   						<table>
+			 	   					<thead>
+			 	   						<tr>
+			 	   							<th>header</th>
+			 	   							<th>header</th>
+			 	   							<th>header</th>
+			 	   						</tr>
+			 	   					</thead>
+			 	   					<tbody>
+			 	   						<tr>
+			 	   							<th>Lorem ipsum dolor</th>
+			 	   							<td>content</td>
+			 	   							<td>content</td>
+			 	   						</tr>
+			 	   						<tr>
+			 	   							<th>Lorem ipsum dolor</th>
+			 	   							<td>content</td>
+			 	   							<td>content</td>
+			 	   						</tr>
+			 	   						<tr>
+			 	   							<th>Lorem ipsum dolor</th>
+			 	   							<td>content</td>
+			 	   							<td>content</td>
+			 	   						</tr>
+			 	   						<tr>
+			 	   							<th>Lorem ipsum dolor</th>
+			 	   							<td>content</td>
+			 	   							<td>content</td>
+			 	   						</tr>
+			 	   					</tbody>
+			 	   				</table>
+			 	   				</div>
+	 	   					</div>		 	   				
+	 	   				</div>
+	 	   			</section>		 	   				 	   				
+<!-- ============== GRID  ======================================================================================== -->		 	   				
+ 	   				<section title="Grid" role="region" class="rounded">
+	 	   				<header class="subhead">
+	 	   					<h2>Grid</h2>	 	   					
+	 	   				</header>		 	   				
+	 	   				<div class="grid" title="Grid with Single Column Layout">
+							<div class="grid-12 view">grid-12</div>
+						</div>
+												
+						<div class="grid" title="Grid with Two Column Layout">
+							<div class="grid-4 push-2 view">grid-4 push-2</div>
+							<div class="grid-4 view">grid-4</div>
+						</div>
+						<div class="grid" title="Grid with Three Column Layout">
+							<div class="grid-3 push-1 view">grid-3 push-1</div>
+							<div class="grid-3 push-1 view">grid-3 push-1</div>
+							<div class="grid-3 push-1 view">grid-3 push-1</div>
+						</div>
+						<div class="grid" title="Grid Layout">
+							<div class="grid-2 push-10 view">grid-2 push-10</div>
+						</div>
+						<div class="grid" title="Grid Layout">
+							<div class="grid-3 push-9 view">grid-3 push-9</div>
+						</div>
+						<div class="grid" title="Grid Layout">
+							<div class="grid-4 push-8 view">grid-4 push-8</div>
+						</div>
+						<div class="grid" title="Grid Layout">
+							<div class="grid-5 push-7 view">grid-5 push-7</div>
+						</div>
+						<div class="grid" title="Grid Layout">
+							<div class="grid-6 push-6 view">grid-6 push-6</div>
+						</div>
+						<div class="grid" title="Grid Layout">
+							<div class="grid-7 push-5 view">"grid-7 push-5</div>
+						</div>
+						<div class="grid" title="Grid Layout">
+							<div class="grid-8 push-4 view">grid-8 push-4</div>
+						</div>
+						<div class="grid" title="Grid Layout">
+							<div class="grid-9 push-3 view">grid-9 push-3</div>
+						</div>
+						<div class="grid" title="Grid Layout">
+							<div class="grid-10 push-2 view">grid-10 push-2</div>
+						</div>
+						<div class="grid" title="Grid with Two Column Layout">
+							<div class="grid-6 view">1 of 2 (grid-6)</div>
+							<div class="grid-6 view">2 of 2 (grid-6)</div>
+						</div>
+						<div class="grid" title="Grid with Three Column Layout">
+							<div class="grid-4 view">1 of 3 (grid-4)</div>
+							<div class="grid-4 view">2 of 3 (grid-4)</div>
+							<div class="grid-4 view">3 of 3 (grid-4)</div>
+						</div>
+	 	   				<div class="grid" title="Grid with Four Column Layout">
+							<div class="grid-3 view">1 of 4 (grid-3)</div>
+							<div class="grid-3 view">2 of 4 (grid-3)</div>
+							<div class="grid-3 view">3 of 4 (grid-3)</div>
+							<div class="grid-3 view">4 of 4 (grid-3)</div>
+						</div>						
+						<div class="grid" title="Grid with Six Column Layout">
+							<div class="grid-2 view">1 of 6 (grid-2)</div>
+							<div class="grid-2 view">2 of 6 (grid-2)</div>
+							<div class="grid-2 view">3 of 6 (grid-2)</div>
+							<div class="grid-2 view">4 of 6 (grid-2)</div>
+							<div class="grid-2 view">5 of 6 (grid-2)</div>
+							<div class="grid-2 view">6 of 6 (grid-2)</div>
+						</div>
 						
-						<div class="grid about">
-							<section class="grid-4 t-center">
-	 	   						<h2 class="websymbols">&lt; &gt;</h2>
-	 	   						<h1>HTML <em>The Markup</em></h1>
-	 	   						<p>Hummingbird contains a complete base <a href="styleguide.html">styleguide</a> template that details: Typography, responsive grid, forms, tables, button styles, messages, some basic web icons, &amp; email newsletter template</p>	
-	 	   							<div class="grid-8 f-center t-center taglist">
-		 	   						<a href="styleguide.html">Style Guide</a>
-		 	   						<a href="landing.html">Landing Page</a>
-		 	   						<a href="newsletter.html">Newsletter</a>
-		 	   					</div> 
-		 	   					<p class="t-center">
-		 	   						<a href="markup.html" class="tag">More info</a>
-		 	   					</p>
-	 	   					</section>
-	 	   					<section class="grid-4 t-center">
-	 	   						<h2 class="websymbols">I</h2>
-	 	   						<h1>CSS <em>The Style</em></h1>
-	 	   						<p>There are two main Cascading Style Sheets in the framework:
-	 	   						<b>style.css:</b> contains basic reset and layout (there should be no need to change this file).
-	 	   						<b>skin.css:</b> contains all the site specific CSS goes including all the widgets and plugins for your site.</a>
-	 	   						</p>
-	 	   						<div class="grid-8 f-center t-center taglist"> 
-		 	   						<a href="css/style.css">Base CSS</a>
-		 	   						<a href="css/skin.css">Demo Skin</a>
-		 	   					</div>
-		 	   					<p class="t-center">
-		 	   						<a href="style.html" class="tag">More info</a>
-		 	   					</p>
-	 	   					</section>
-	 	   					<section class="grid-4 t-center last">
- 	   							<h2 class="websymbols">S</h2>
- 	   							<h1>JavaScript <em>The Interaction</em></h1>	
- 	   							<p>We use jQuery as our core Javascript framework. The main Javascript file that runs all the interaction functions is interface.js. There are also a number of plugins that are included.</p>	 	   						
- 	   							<div class="f-center t-center taglist">
-		 	   						<a href="samples/carousel.html">Carousel</a>
-		 	   						<a href="samples/popup.html">Popup</a>
-		 	   						<a href="samples/tooltip.html">Tooltip</a>
-		 	   						<a href="samples/validator.html">Form Validator</a>
-		 	   						<a href="samples/navigation.html">Navigation</a>
-		 	   						<a href="samples/googlemap.html">Google Map</a>
-		 	   						<a href="samples/magnifier.html">Magnifier</a>
-		 	   						<a href="samples/fisheye.html">Fish Eye</a>
-		 	   						<a href="samples/datepicker.html">Datepicker</a>
-		 	   						<a href="samples/accordian.html">Accordian</a>
-		 	   						<a href="samples/tabs.html">Tabs</a>
-		 	   						<a href="samples/dynamic-nav.html">Dynamic Nav</a>
-		 	   					</div>
-		 	   					<p class="t-center">
-		 	   						<a href="javascript.html" class="tag">More info</a>
-		 	   					</p>
- 	   						</section>
- 	   						
- 	   						</div>
+						<div class="grid">
+							<div class="grid-1 view">grid-1</div>
+							<div class="grid-11 last view"> grid-11</div>
+						</div>
+						<div class="grid">
+							<div class="grid-2 view">grid-2</div>
+							<div class="grid-10 view">grid-10</div>
+						</div>	
+						<div class="grid">
+							<div class="grid-3 view">grid-3</div>
+							<div class="grid-9 view">grid-9</div>
+						</div>	
+						<div class="grid">
+							<div class="grid-4 view">grid-4</div>
+							<div class="grid-8 view">grid-8</div>
+						</div>	
+						<div class="grid">
+							<div class="grid-5 view">grid-5</div>
+							<div class="grid-7 view">grid-7</div>
+						</div>
+						<div class="grid">
+							<div class="grid-6 view">grid-6</div>
+							<div class="grid-6 view">grid-6</div>
+						</div>	
+						<div class="grid">
+							<div class="grid-7 view">grid-7</div>
+							<div class="grid-5 view">grid-5</div>
+						</div>	
+						<div class="grid">
+							<div class="grid-8 view">grid-8</div>
+							<div class="grid-4 view">grid-4</div>
+						</div>	
+						<div class="grid">
+							<div class="grid-9 view">grid-9</div>
+							<div class="grid-3 view">grid-3</div>
+						</div>	
+						<div class="grid">
+							<div class="grid-10 view">grid-10</div>
+							<div class="grid-2 view">grid-2</div>
+						</div>			
+						<div class="grid">
+							<div class="grid-11 view">grid-11</div>
+							<div class="grid-1 view">grid-1</div>
+						</div>
+						<div class="grid">
+							<div class="grid-1 view">grid-1</div>
+							<div class="grid-1 view">grid-1</div>
+							<div class="grid-1 view">grid-1</div>
+							<div class="grid-1 view">grid-1</div>
+							<div class="grid-1 view">grid-1</div>
+							<div class="grid-1 view">grid-1</div>
+							<div class="grid-1 view">grid-1</div>
+							<div class="grid-1 view">grid-1</div>
+							<div class="grid-1 view">grid-1</div>
+							<div class="grid-1 view">grid-1</div>
+							<div class="grid-1 view">grid-1</div>
+							<div class="grid-1 last view">grid-1</div>
+						</div>
+						<ul class="list grid" title="Grid List with Three Column Layout">
+							<li class="grid-4 view">Grid List: 1 of 3 (grid-4)</li>
+							<li class="grid-4 view">Grid List: 2 of 3 (grid-4)</li>
+							<li class="grid-4 view">Grid List: 3 of 3 (grid-4)</li>
+						</ul>
+						<div class="grid" title="Grid with Multiple Nested Grids">								
+							<div class="grid-6">									
+								<h4 class="t-center">grid-6 (w/ nested grid)</h4>									
+								<div class="grid" title="Grid with Two Column Layout">
+									<div class="grid-3 view">1 of 2 (grid-3)</div>
+									<div class="grid-3 view">2 of 2 (grid-3)</div>
+								</div>
+							</div>
+							<div class="grid-6 last">								
+								<h4 class="t-center">grid-6 (w/ nested grid)</h4>									
+								<div class="grid" title="Grid with Three Column Layout">
+									<div class="grid-2 view">1 of 3 (grid-2)</div>
+									<div class="grid-2 view">2 of 3 (grid-2)</div>
+									<div class="grid-2 view">3 of 3 (grid-2)</div>
+								</div>								
+							</div>							
+						</div>										
+					</section>						
+<!-- ============== FORMS  ======================================================================================== -->							
+					<section title="Forms" role="region" class="rounded">
+						<header class="subhead">
+	 	   					<h2>Forms</h2>	 	   					
+	 	   				</header>
+	 	   				<div class="grid">
+	 	   					<div class="grid-8">
+	 	   						<form>
+	 	   							<fieldset>
+							          <legend>Basic form elements</legend>
+							          <ul>
+							          	<li>
+							          		<label for="input-small">Small input</label>
+							              	<input type="text" size="10" name="input-small" id="input-small" class="small">
+							          	</li>
+							          	<li>
+							          		<label for="input-normal">Normal input</label>
+							              	<input type="text" size="20" name="input-normal" id="input-normal">
+							          	</li>
+							          	<li>
+							          		<label for="input-large">Large input</label>
+							              	<input type="text" size="30" name="input-large" id="input-large" class="large">
+							          	</li>						          	
+							          	<li>
+							          		<label for="select-normal">Normal select</label>
+							          		<select id="select-normal" name="select-normal">
+								              <option>1</option>
+								              <option>2</option>
+								              <option>3</option>
+								              <option>4</option>
+								              <option>5</option>
+							              </select>
+							          	</li>
+							          	<li>
+							          		<label for="select-multi-1">Multi select</label>
+							          		<select id="select-multi-1" name="select-multi-1" class="small">
+								              <option>1</option>
+								              <option>2</option>
+								              <option>3</option>
+								              <option>4</option>
+								              <option>5</option>
+							              </select>
+							              <select id="select-multi-2" name="select-multi-2">
+								              <option>1</option>
+								              <option>2</option>
+								              <option>3</option>
+								              <option>4</option>
+								              <option>5</option>
+							              </select>
+							          	</li>								          	
+							          	<li>
+							          		<label for="select-multi-3">Multi select</label>
+							          		<select id="select-multi-3" name="select-multi-3" multiple="multiple" class="medium">
+								                <option>1</option>
+								                <option>2</option>
+								                <option>3</option>
+								                <option>4</option>
+								                <option>5</option>
+							              	</select>
+							          	</li>								          	
+							          	<li>
+							          		<label for="disabledInput">Disabled input</label>								            
+							              	<input type="text" disabled="" placeholder="Disabled input" size="30" name="disabledInput" id="disabledInput" class="large disabled">
+							          	</li>
+							          	<li>
+							          		<label for="textarea-normal">Normal textarea</label>	
+							          		<textarea rows="3" id="textarea-normal" name="textarea-normal"></textarea>
+							          	</li>
+							          	<li>
+							          		<label for="textarea-large">Large textarea</label>	
+							          		<textarea rows="6" id="textarea-large" name="textarea-large" class="large"></textarea>
+							          	</li>
+							          	<li>
+							          		<label for="disabledTextArea-1">Disabled input</label>	
+							          		<textarea disabled="" placeholder="Disabled input" rows="3" id="disabledTextArea-1" name="disabledTextArea-1" class="large"></textarea>
+							          	</li>
+							          	<li>
+			    							<label for="search">search</label>
+			    							<input data-type="search" name="search" id="search" />
+			    						</li>
+			    						<li>
+			    							<label for="slider">slider</label>
+			    							<input type="range" name="slider" id="slider" value="0" min="0" max="100" class="sliderField" />
+			    						</li>
+							          </ul>
+							    	</fieldset> 
+							    	<fieldset>
+							        	<legend>Form help &amp; error handling</legend>
+							        	<ul>
+							        		<li class="help">
+							          			<label for="input-help">Input with help</label>
+							              		<input type="text" size="20" name="input-help" id="input-help">
+							              		<em>Hey tiger, need a hand with that?</em>
+							          		</li>
+							          		<li class="error">
+							          			<label for="input-error">Input with help</label>
+							              		<input type="text" size="20" name="input-help" id="input-error">
+							              		<em>Oops something went wrong</em>
+							          		</li>
+							          		<li>
+							          			<label for="input-error-label">Input with help text</label>
+							              		<input type="text" size="20" name="input-error-label" id="input-help-label">
+							              		<em class="help">Hey tiger, need a hand with that?</em>
+							          		</li>
+							          		<li>
+							          			<label for="input-error-label">Input with error text</label>
+							              		<input type="text" size="20" name="input-error-label" id="input-error-label">
+							              		<em class="error">Oops something went wrong</em>
+							          		</li>
+							          		<li>
+							          			<input type="submit" value="Submit" class="btn rounded f-right">
+							          			<input type="submit" value="Cancel" class="btn inactive rounded f-left">							          			
+							          		</li>
+							        	</ul>								          
+							    	</fieldset>    
+	 	   						</form>
+	 	   					</div>	 	   					
+	 	   					<div class="grid-4 last">
+	 	   						<form class="form-stacked">
+	 	   							<fieldset>
+							          <legend>A stacked form</legend>
+							          <ul>
+							          	<li>
+							          		<label for="input">Normal input</label>
+							              	<input type="text" size="20" name="input" id="input">
+							          	</li>
+							          	<li class="error">
+							          		<label for="select">Normal select</label>
+							          		<select id="select" name="select">
+								              <option>1</option>
+								              <option>2</option>
+								              <option>3</option>
+								              <option>4</option>
+								              <option>5</option>
+							              </select>
+							              <em>Oops something went wrong</em>
+							          	</li>
+							          	<li>
+							          		<label for="disabledTextArea-2">Normal textarea</label>	
+							          		<textarea rows="3" id="disabledTextArea-2" name="textarea"></textarea>
+							          	</li>
+							          	<li class="t-center">
+							          		<input type="submit" value="Submit" class="btn rounded">
+							          	</li>
+							          </ul>
+							      </fieldset>
+							  </form>
+	 	   					</div>	 	   				
+	 	   				</div>
+	 	   			</section>		 	   			
+<!-- ============== BUTTONS  ======================================================================================== -->							
+					<section title="Buttons" role="region" class="rounded">
+						<header class="subhead">
+	 	   					<h2>Buttons</h2>	 	   					
+	 	   				</header>
+	 	   				<div class="grid">
+	 	   					<div class="grid-3">
+	 	   						<h3>Buttons</h3>
+	 	   						<button class="btn rounded">Button</button>
+	 	   						<button class="btn inactive rounded">Disabled button</button>
+	 	   						<button class="btn success rounded">Success button</button>
+	 	   						<button class="btn error rounded">Error button</button>
+	 	   						<button class="btn small rounded" disabled="disabled">Button small</button>
+	 	   					</div>
+	 	   					<div class="grid-3">
+	 	   						<h3>Inputs</h3>
+	 	   						<input type="submit" value="Normal input" class="btn rounded">
+	 	   						<input type="submit" value="Disabled input" class="btn inactive rounded">
+	 	   						<input type="submit" value="Success input" class="btn success rounded">
+	 	   						<input type="submit" value="Error input" class="btn error rounded">
+	 	   						<input type="submit" value="Small input" class="btn small rounded">
+	 	   					</div>
+	 	   					<div class="grid-3">
+	 	   						<h3>Anchors</h3>
+	 	   						<a href="#" class="btn rounded">Anchor</a>
+	 	   						<a href="#" class="btn inactive rounded">Disabled anchor</a>
+	 	   						<a href="#" class="btn success rounded">Success anchor</a>
+	 	   						<a href="#" class="btn error rounded">Error anchor</a>
+	 	   						<a href="#" class="btn small rounded">Small anchor</a>
+	 	   					</div>
+	 	   					<div class="grid-3 last">
+	 	   						<h3>Tags</h3>
+	 	   						<a href="#" class="tag">This</a>
+	 	   						<a href="#" class="tag">Is a</a>
+	 	   						<a href="#" class="tag">Bunch</a>  
+	 	   						<a href="#" class="tag">of Tag</a>
+	 	   						<a href="#" class="tag">Examples</a> 
+	 	   					</div>
+	 	   				</div>
+	 	   			</section>
+<!-- ============== MESSAGES  ======================================================================================== --> 	   			
+	 	   			<section title="Messages" role="region" class="rounded">
+	 	   				<header class="subhead">
+	 	   					<h2>Messages</h2>	 	   					
+	 	   				</header>
+	 	   				<div class="module message rounded" role="status">
+        					<a href="#" class="close">×</a>
+        					<p><strong>Message!</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum hendrerit cursus erat, a tincidunt ipsum malesuada at. Nam id dapibus eros. Duis vel sem ut mauris tincidunt consectetur. Nunc eu diam quis arcu vulputate pellentesque vehicula a dolor.</p>
+      					</div>
+		 	   			<div class="module message success rounded" role="status">
+        					<a href="#" class="close">×</a>
+        					<p><strong>Success!</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum hendrerit cursus erat, a tincidunt ipsum malesuada at. Nam id dapibus eros. Duis vel sem ut mauris tincidunt consectetur. Nunc eu diam quis arcu vulputate pellentesque vehicula a dolor.</p>
+      					</div>
+      					<div class="module message error rounded t-center" role="status">
+        					<a href="#" class="close">×</a>
+        					<p><strong>Error!</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum hendrerit cursus erat, a tincidunt ipsum malesuada at. Nam id dapibus eros. Duis vel sem ut mauris tincidunt consectetur. Nunc eu diam quis arcu vulputate pellentesque vehicula a dolor.</p>
+      					</div>		
+	 	   			</section>		 	   			
+<!-- ============== ICONS  ======================================================================================== -->		
+	 	   			<section title="Icons" role="region" class="rounded">
+						<header class="subhead">
+	 	   					<h2>Icons</h2>	 	   					
+	 	   				</header>
+	 	   				<div class="grid">		 	   					
+	 	   					<div class="grid-3">
+	 	   						<h3>Icons with text</h3>
+	 	   						<ul class="list">
+	 	   						<li><a href="http://twitter.com" class="twitter">Follow on twitter</a></li>
+	 	   						<li><a href="http://facebook.com" class="facebook">Connect on facebook</a></li>
+	 	   						<li><a class="email" href="mailto:johnsmith@mail.com">Shoot us an email</a></li>
+	 	   						</ul>		 	   						
+	 	   					</div>
+	 	   					<div class="grid-9 last">
+	 	   						<h3>Icons with webfont</h3>
+	 	   						<ul class="websymbols list">
+	 	   						<li>q w e r t y u i o p [ ] \
+	 	   						a s d f g h j k l ; '
+	 	   						z x c v b n m , . / 
+	 	   						Q R T I O P { }
+	 	   						A S D F H J K L : "
+	 	   						Z X C B N M &lt; &gt; ?</li> 	   						
+	 	   						</ul>	 	   						
+	 	   						<ul class="iconic list">
+	 	   						<li>
+	 	   						1 2 3 4 5 6 7 8 9 0 - =
+	 	   						q w e r t y u i o p a s d f g h j k l z x c v b n m 
+	 	   						Q W E Y P A J L Z X V M 	 	   						
+	 	   						! @ # $ % ^ & * ( ) _ + \ { } 
+	 	   						</li> 	   						
+	 	   						</ul>   						
+	 	   					</div>	 	   					
+		 	   			</div>
+		 	   		</section>
 
-				 	   							 	   				
-		    	
-		 		</div><!-- end contentwrap -->  	
-			</div><!-- end #content -->
-		</div><!-- end pagewrap --> 
-    </div><!-- end page -->    	
-    <footer class="clear">
- 		<div class="footerWrap"> 		   		
-    	</div><!-- end footerwrap --> 
-	</footer><!-- end of footer -->    	
+		</div><!-- end page --> 	
+	</div><!-- end #content --> 	
+    <div id="footer">
+    	<footer> 		
+ 			<nav role="navigation">			
+				<ul role="menu">
+				<li role="menuitem"><a href="index.html">Home</a></li>
+				<li role="menuitem"><a href="template.html">Template</a></li>
+				<li role="menuitem"><a href="samples/template-welcome.html">Welcome</a></li>
+				<li role="menuitem"><a href="samples/template-about.html">About</a></li>
+				<li role="menuitem"><a href="samples/template-blog.html">Blog</a></li>
+				<li role="menuitem"><a href="samples/template-article.html">Article</a></li>
+				<li role="menuitem"><a href="samples/template-newsletter.html">Newsletter</a></li>				
+				</ul>
+			</nav> 			
+ 		</footer><!-- end of footer -->
+ 	</div><!-- end footerwrap --> 	
 </div><!--! end of #wrap -->
 <!-- JavaScript at the bottom for fast page loading -->
 	<!-- plugin scripts-->
