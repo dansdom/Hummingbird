@@ -1,6 +1,7 @@
 /*
 	jQuery Navigation Plugin v2.0
 	Copyright (c) 2011 Daniel Thomson
+	https://github.com/dansdom/plugins-navigation
 	
 	Licensed under the MIT license:
 	http://www.opensource.org/licenses/mit-license.php

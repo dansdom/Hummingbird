@@ -1,4 +1,5 @@
 // Tabbing jQuery plugin v2.0
+// https://github.com/dansdom/plugins-tab-nav
 // v 1.0 - basic functionality
 // v 2.0 - moved to new plugin architecture
 
