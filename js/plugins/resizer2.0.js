@@ -1,4 +1,14 @@
-// test jQuery plugin
+/* 
+	jQuery Window Resizer Plugin 
+	Copyright (c) 2011 Daniel Thomson
+	https://github.com/dansdom/plugins-window-resizer
+	
+	Licensed under the MIT license:
+	http://www.opensource.org/licenses/mit-license.php
+*/
+
+// v 1.0 - basic functionality
+// v 2.0 - refactored for new architecture
 
 (function ($) {
 	// this ones for you 'uncle' Doug!
@@ -14,6 +24,11 @@
 		// extend the settings object with the options, make a 'deep' copy of the object using an empty 'holding' object
 		this.opts = $.extend(true, {}, $.WindowResize.settings, options);
 		this.init();
+		// run the callback function if it is defined
+		if (typeof callback === "function")
+		{
+			callback.call();
+		}
 	};
 	
 	// these are the plugin default settings that will be over-written by user settings
@@ -126,8 +141,6 @@
 			// putting it all together
 			this.el.controlBox += controlBtns + controlText + playBox + closeBtn + '</div>' + miniBar +'</div>';
 			//console.log(controlBox);
-	
-	
 			return this.el.controlBox;
 		},
 		addBox : function()
@@ -330,8 +343,8 @@
 			// get inner width and add the difference
 			adjustedX = w + (availW - innerX);
 			adjustedY = h + (availH - innerY);
-			console.log("adjustedX: " + adjustedX);
-			console.log("adjustedY: " + adjustedY);
+			//console.log("adjustedX: " + adjustedX);
+			//console.log("adjustedY: " + adjustedY);
 			
 			// not sure I need the first resize here
 			window.resizeTo(w, h);

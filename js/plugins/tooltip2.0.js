@@ -3,6 +3,7 @@
 /*
 	jQuery Tooltip Plugin 1.4
 	Copyright (c) 2011 Daniel Thomson
+	https://github.com/dansdom/plugins-tooltip
 	
 	Licensed under the MIT license:
 	http://www.opensource.org/licenses/mit-license.php
@@ -37,6 +38,11 @@
 		// extend the settings object with the options, make a 'deep' copy of the object using an empty 'holding' object
 		this.options = $.extend(true, {}, $.Tooltip.settings, options);
 		this.init();
+		// run the callback function if it is defined
+		if (typeof callback === "function")
+		{
+			callback.call();
+		}
 	};
 	
 	// these are the plugin default settings that will be over-written by user settings

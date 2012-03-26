@@ -1,6 +1,7 @@
 /*
 	jQuery Form Validator Plugin v2.0
 	Copyright (c) 2011 Daniel Thomson
+	https://github.com/dansdom/plugins-form-validator
 	
 	Licensed under the MIT license:
 	http://www.opensource.org/licenses/mit-license.php
@@ -90,6 +91,12 @@
 		this.theFormValidationFields = this.el.find("." + this.opts.formClasses.requiredClass + ", ." + this.opts.formClasses.optionalClass);
 			
 		this.init();
+		
+		// run the callback function if it is defined
+		if (typeof callback === "function")
+		{
+			callback.call();
+		}
 	};
 	
 	// these are the plugin default settings that will be over-written by user settings

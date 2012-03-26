@@ -1,4 +1,5 @@
 // Tabbing jQuery plugin v2.0
+// https://github.com/dansdom/plugins-tab-nav
 // v 1.0 - basic functionality
 // v 2.0 - moved to new plugin architecture
 
@@ -16,6 +17,11 @@
 		// extend the settings object with the options, make a 'deep' copy of the object using an empty 'holding' object
 		this.opts = $.extend(true, {}, $.Tabs.settings, options);
 		this.init();
+		// run the callback function if it is defined
+		if (typeof callback === "function")
+		{
+			callback.call();
+		}
 	};
 	
 	// these are the plugin default settings that will be over-written by user settings
