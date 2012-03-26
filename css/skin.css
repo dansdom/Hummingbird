@@ -14,7 +14,7 @@
 /* DEFAULT  
  * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 html {background:#eee;color:#222}
-body {background:none}
+body {background:none;font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:300}
 blockquote p {font:normal 2em/1.2 'Homemade Apple',Georgia}
 h1,h2,h3,h4,h5,h6 {font-weight:bold;letter-spacing:-0.03em}
 a {color:#1b75bb;text-decoration:none;-webkit-transition: all 0.1s ease;-moz-transition: all 0.1s ease;-o-transition: all 0.1s ease;transition: all 0.1s ease}
