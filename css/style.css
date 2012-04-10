@@ -9,9 +9,9 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {d
 html {background:white;font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
 body {min-height:100%;font:13px/18px Helvetica,Arial,sans-serif}
 table {border-collapse:collapse;border-spacing:0}
-td {vertical-align:top}
+td {vertical-align:top} 
 input,select {vertical-align:middle}
-textarea, input, button {-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+textarea,input,button {-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 nav ul,nav ol,nav li {margin:0;padding:0;list-style:none;list-style-image:none}
 img,a img {border:0}
 html>body img {*-ms-interpolation-mode:bicubic}
