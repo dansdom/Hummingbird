@@ -11,6 +11,7 @@ body {min-height:100%;font:13px/18px Helvetica,Arial,sans-serif}
 table {border-collapse:collapse;border-spacing:0}
 td {vertical-align:top}
 input,select {vertical-align:middle}
+textarea, input, button {-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 nav ul,nav ol,nav li {margin:0;padding:0;list-style:none;list-style-image:none}
 img,a img {border:0}
 html>body img {*-ms-interpolation-mode:bicubic}
@@ -153,7 +154,7 @@ form li .btn {display:inline-block}
 .fieldBox span {clear:both;width:100%;display:block}
 .fieldLabel {text-align:right}
 /*stacked forms */
-.form-stacked input,.form-stacked textarea,.form-stacked select,.form-stacked .uneditable-input {display:block;width:75%}
+.form-stacked input,.form-stacked textarea,.form-stacked select,.form-stacked .uneditable-input {display:block;width:100%}
 .form-stacked li > label, .form-stacked .fieldLabel {width:auto;float:none;margin:0 0 5px 0;text-align:left}
 .form-stacked legend {padding:0 0 10px 0}
 .form-stacked .radioField, .form-stacked .checkField {display:inline;width:auto}
@@ -174,7 +175,7 @@ form .error {color:#c01702}
 form .form-error {border-color:#c01702}
 form .input > .error-message {display:inline-block;font-style:normal;font-size:0.9em;font-weight:bold;margin-left:37%;color:#c01702}
 form li > em.error,form .input > em.error {color:#c01702}
-.form-stacked .input input,.form-stacked .input textarea,.form-stacked .input select {width:96%}
+.form-stacked .input input,.form-stacked .input textarea,.form-stacked .input select {width:100%}
 .form-stacked .input > label {width:auto;float:none;margin:0 0 5px 0;text-align:left}
 .form-stacked .input > em {margin:0}
 .form-stacked .input > .error-message {clear:both;display:block;height:1.3em}
