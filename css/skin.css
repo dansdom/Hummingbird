@@ -72,6 +72,9 @@ a:link {-webkit-tap-highlight-color:#1b75bb}
 .twitter {background-position:0 0} 			.twitter:hover {background-position:0 -100px} 
 .facebook {background-position:0 -200px}	.facebook:hover {background-position:0 -300px}
 .email {background-position:0 -400px}		.email:hover {background-position:0 -500px}
+.the-icons li {list-style:none}
+.grid.dark-icons .grid-3 {background:#333;padding-top:20px}
+.grid.dark-icons li {color:#fff}
 /* Buttons */
 .btn,form .submit input {display:inline-block;font-size:14px;font-weight:bold;line-height:20px;color:#fff;letter-spacing:normal;white-space:nowrap;background:#0676BE;border:1px solid #1250a5;height:auto;width:auto;cursor:pointer;padding:7px 14px 8px;text-shadow:0 -1px 0 rgba(0,0,0,0.25);-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.25);-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.25);box-shadow:inset 0 1px 0 rgba(255,255,255,0.25);-webkit-appearance: none}
 .btn:hover,.taglist a:hover {background:#222;border-color:#222;color:#fff}
